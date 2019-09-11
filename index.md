@@ -5,5 +5,5 @@ The article “OPEN DATA IN HEALTH-GEOMATICS: MAPPING AND EVALUATING PUBLICLY AC
 
 The authors acquired their street and building information from the opensource mapping database OpenStreetMap. Land use information was also open source, coming from the Lombardy region geoportal. That the technology was open source wasn’t necessarily important for the study itself, but it means that the same method can be used to develop catchment areas for AEDS for any city that has been sufficiently mapped on OpenStreetMap. The street data also limited the conclusions of the paper because someone going to get an AED would be able to use footpaths, which are not accounted for in the street data, so the realistic catchment areas may actually be larger than calculated.
 
-https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XLII-4-W14/63/2019/
+[link](https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XLII-4-W14/63/2019/)
 
