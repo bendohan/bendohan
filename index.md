@@ -12,4 +12,4 @@ The authors acquired their street and building information from the opensource m
 
 I made this model for finding direction and distance in my QGIS class
 
-[model1.model3]
+[my first QGIS model](model1.model3)
