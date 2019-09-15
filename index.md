@@ -11,3 +11,5 @@ The authors acquired their street and building information from the opensource m
 ## My first QGIS model
 
 I made this model for finding direction and distance in my QGIS class
+
+[model1.model3]
