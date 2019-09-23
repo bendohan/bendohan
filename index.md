@@ -13,3 +13,5 @@ The authors acquired their street and building information from the opensource m
 I made this model for finding direction and distance in my QGIS class
 
 [my first QGIS model](model1.model3)
+
+I used the model to calculate the direction and distance of the census tracts in Suffolk County, MA from the Central Business District of Boston, and showed how distance comparess to median gross rent in [this scatter plot], as well as how direction compared to median gross rent in [this polar plot]
