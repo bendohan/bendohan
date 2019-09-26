@@ -15,8 +15,8 @@
 ![Map of flow accumulation](flow_accumulation_map.png)
 ![legend](flow_accumulation_map_legend.png)
 
-![Map of channel network from flow accumulation](channel_network_map.png)
-![legend](channel_network_map_legend.png)
+![Map of channel network from flow accumulation](channel_network2.png)
+![legend](channel_network2_legend.png)
 
 ![Map of channel direction](channel_direction_map.png)
 ![legend](channel_direction_map_legend.png)
