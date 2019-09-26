@@ -13,10 +13,10 @@ The data is stored in [this geopackage](Suffolk_tracts.gpkg), which includes the
 
 This new model compensates for differences in projections by reprojecting all inputs in wgs 1984, where distance is always accurate, through an sql query and calculating this distance between the cbd and other points after this. 
 
-The model can be seen here
+The model can be seen here:
 ![updated model](model.PNG)
 
-Is a map of the directions it calculated for each census tract from the CBD of Boston
+Here is a map of the directions it calculated for each census tract from the CBD of Boston
 ![direction map](direction_boston.png)
 
 Here is a map of the distances for each census tract from the CBD of Boston
