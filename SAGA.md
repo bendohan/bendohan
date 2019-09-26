@@ -21,4 +21,5 @@
 ![Map of channel direction](channel_direction_map.png)
 ![legend](channel_direction_map_legend.png)
 
-![Map of channels and hillshade](
+![Map of channels and hillshade](dem_channels.png)
+![legend](dem_channels_legend.png)
