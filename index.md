@@ -1,3 +1,5 @@
+Click [here](GQIS.md) for my work in QGIS
+
 ## Opensource data and AED accessibility tracking
 
 The article “OPEN DATA IN HEALTH-GEOMATICS: MAPPING AND EVALUATING PUBLICLY ACCESSIBLE DEFIBRILLATORS” attempts to use road networks to improve the calculation of the area in which an AED is useful. Traditionally, this is by done by creating a 100m buffer zone around the location of the AED, but the authors use a road network in Lombard, Italy, to calculate what they call a “realistic” approach. The catchment areas they created are 200-meter distances over roads from the location of the AED. The authors were attempting to determine whether geographical factors could determine which method was more effective in each scenario, concluding that the realistic method was useful in urbanized areas, but ineffective in less urban areas without extensive road systems.
