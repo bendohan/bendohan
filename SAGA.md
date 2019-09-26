@@ -12,8 +12,8 @@
 ![Map of DEM without any sinks](sinkfill_dem_map.png)
 ![legend](sinkfill_dem_map_legend.png)
 
-![Map of flow accumulation](flow_accumulation_map.png)
-![legend](flow_accumulation_map_legend.png)
+![Map of flow accumulation](flow_accumulation2.png)
+![legend](flow_accumulation2_legend.png)
 
 ![Map of channel network from flow accumulation](channel_network2.png)
 ![legend](channel_network2_legend.png)
