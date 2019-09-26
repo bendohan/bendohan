@@ -9,7 +9,7 @@ I made this model for finding direction and distance in my QGIS class
 
 I used the updated model to calculate the direction and distance of the census tracts in Suffolk County, MA from the Central Business District of Boston, and showed how distance comparess to median gross rent in [this scatter plot](boston_scatterplot.html), as well as how direction compared to median gross rent in [this polar plot](polar_boston.html)
 
-The data is stored in [this geopackage](suffolk_tracts.gpkg), which includes the point I used for the raw data for the latinx population and Median Gross Rent in Massachusets, as well as the CBD I generated and a shapefile of the census tracts in Suffolk county with the relevant data joined.
+The data is stored in [this geopackage](Suffolk_tracts.gpkg), which includes the point I used for the raw data for the latinx population and Median Gross Rent in Massachusets, as well as the CBD I generated and a shapefile of the census tracts in Suffolk county with the relevant data joined.
 
 This new model compensates for differences in projections by reprojecting all inputs in wgs 1984, where distance is always accurate, through an sql query and calculating this distance between the cbd and other points after this. 
 
