@@ -17,3 +17,6 @@
 
 ![Map of channel network from flow accumulation](channel_network_map.png)
 ![legend](channel_network_map_legend.png)
+
+![Map of channel direction](
+![legend](
