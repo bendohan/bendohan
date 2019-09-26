@@ -12,7 +12,7 @@ I used the updated model to calculate the direction and distance of the census t
 This new model compensates for differences in projections by reprojecting all inputs in wgs 1984, where distance is always accurate, through an sql query and calculating this distance between the cbd and other points after this. 
 
 The model can be seen here
-![updated model](model.png)
+![updated model](model.PNG)
 
 Here are the directions it calculated for each census tract from the CBD of Boston
 
