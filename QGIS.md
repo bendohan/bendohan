@@ -14,6 +14,8 @@ This new model compensates for differences in projections by reprojecting all in
 The model can be seen here
 ![updated model](model.PNG)
 
-Here are the directions it calculated for each census tract from the CBD of Boston
+Is a map of the directions it calculated for each census tract from the CBD of Boston
+![direction map](direction_boston.png)
 
-Here are the distances for each census tract from the CBD of Boston
+Here is a map of the distances for each census tract from the CBD of Boston
+![distance map](distance_boston.png)
