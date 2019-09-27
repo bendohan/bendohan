@@ -1,6 +1,6 @@
 ## Welcome to Ben's Github Homepage
 
-Click [here](GQIS.md) for my work in QGIS
+Click [here](QGIS.md) for my work in QGIS
 
 Click [here](SAGA.md) for my work in SAGA
 
