@@ -8,7 +8,7 @@ I made this map in SAGA using two SRTM rasters and mosaicking them together. Its
 ![Hillshade model using original DEM](hillshade_image.png)
 ![legend](hillshade_image_legend.png)
 
-This second map is a hillshade model based on the DEM above. The azimuth is 315 degrees and the altitude is 45 degrees.
+This second map is a hillshade model based on the DEM above. The azimuth is 315 degrees and the altitude is 45 degrees. I produced it using the analytical hillshading tool in SAGA.
 
 ![Map of sink routes from DEM](sink_route_map.png)
 ![legend](sink_route_map_legend.png)
