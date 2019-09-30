@@ -3,6 +3,8 @@
 ![Original Mosaic of SRTM data showing Mt. Kilimanjaro](mosaic_map.png)
 ![legend](mosaic_map_legend.png)
 
+I made this map in SAGA using two SRTM rasters and mosaicking them together. Its a basic DEM that shows the elevation of Mount Kilimanjaro
+
 ![Hillshade model using original DEM](hillshade_image.png)
 ![legend](hillshade_image_legend.png)
 
