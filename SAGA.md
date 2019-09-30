@@ -13,8 +13,12 @@ This second map is a hillshade model based on the DEM above. The azimuth is 315 
 ![Map of sink routes from DEM](sink_route_map.png)
 ![legend](sink_route_map_legend.png)
 
+This map shows the sinks in the DEM image, which are spots where one pixel is lower than the surrounding pixels
+
 ![Map of DEM without any sinks](sinkfill_dem_map.png)
 ![legend](sinkfill_dem_map_legend.png)
+
+This is a new DEM built from the original Mosaicked DEM and the sink routes image. Although it looks basically identical to the original DEM, it has filled the sinks revealed in the sink routes so that they do not interfere with channel identification.
 
 ![Map of flow accumulation](flow_accumulation2.png)
 ![legend](flow_accumulation2_legend.png)
