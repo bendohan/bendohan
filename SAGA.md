@@ -23,6 +23,8 @@ This is a new DEM built from the original Mosaicked DEM and the sink routes imag
 ![Map of flow accumulation](flow_accumulation2.png)
 ![legend](flow_accumulation2_legend.png)
 
+This is a map of top-down flow accumulation, which models where water would flow if water came down from above the DEM (such as rain). The opacity of the pixels indicates how many other pixels would be expected to flow into that pixel, with a minimum of 500 in order to be displayed.
+
 ![Map of channel network from flow accumulation](channel_network2.png)
 ![legend](channel_network2_legend.png)
 
