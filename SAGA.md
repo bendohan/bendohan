@@ -38,4 +38,5 @@ This map has the same pixels filled in as the previous map, but rather than colo
 ![Map of channels and hillshade](dem_channels.png)
 ![legend](dem_channels_legend.png)
 
+This map displays a vector version of the channel network overlaid on top of a hillshade, so that how the river channels fit into the terrain can be see.
 
