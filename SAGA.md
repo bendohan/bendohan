@@ -18,7 +18,7 @@ This map shows the sinks in the DEM image, and the colors indicate the different
 ![Map of DEM without any sinks](sinkfill_dem_map.png)
 ![legend](sinkfill_dem_map_legend.png)
 
-This is a new DEM built from the original Mosaicked DEM and the sink routes image. Although it looks basically identical to the original DEM, it has filled the sinks so that they do not interfere with channel identification.
+This is a new DEM built from the original Mosaicked DEM and the sink routes image. Although it looks basically identical to the original DEM, it has filled the sinks so that they do not interfere with the channel mapping that I plan on using the raster for.
 
 ![Map of flow accumulation](flow_accumulation2.png)
 ![legend](flow_accumulation2_legend.png)
