@@ -1,5 +1,7 @@
 ## Using SAGA for modeling Channel Flow
 
+I used SAGA for the first time, and using its tools, modeled where stream channels are likely to form on Mount Kilimanjaro. I started with DEM data from SRTM, acquired through NASA's Earthdata program.
+
 ![Original Mosaic of SRTM data showing Mt. Kilimanjaro](mosaic_map.png)
 ![legend](mosaic_map_legend.png)
 
