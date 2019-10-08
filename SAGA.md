@@ -42,3 +42,7 @@ This map has the same pixels filled in as the previous map, but rather than colo
 
 This map displays a vector version of the channel network overlaid on top of a hillshade, so that how the river channels fit into the terrain can be see. Unlike the raster channel network, the vector version cannot display the rate of flow in any of the channels.
 
+
+## Using Batch Processes to automate the analysis
+
+I learned to speed up the SAGA analysis by using a batch process, for which I used a .bat file with code designed to run on the windows shell. Using information availible in SAGA on how to use command lines, I was able to code then run a batch process that did the entire hydrological analysis in the windows shell without opening up SAGA at all. I was able to produce identical outputs, and it was also extremely easy to adapt the batch process to run using ASTER data instead of SRTM data, which made doing a comparison of the two datasets much easier.
