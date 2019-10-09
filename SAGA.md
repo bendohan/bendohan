@@ -94,6 +94,7 @@ Here are some cool 3D visualizations of the channel networks on the hillshade mo
 SRTM 3D
 ![SRTM 3D](3dSRTM_hs_rc.PNG)
 
+ASTER 3D
 ![ASTER 3D](aster_3d_rc_hs.PNG)
 
 
