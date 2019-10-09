@@ -87,7 +87,7 @@ Meanwhile, in the image below, SRTM and ASTER put the channels in almost exactly
 
 ![ravines](aster_Srtm_sim_hidif.png)
 
-Both datasets produce generally similar results, and it is difficult to say which one is superior. To have a good answer would require extensive testing of error in terms of how accurate the heights are and how close the modeled channels are to the actual channels. A quick analysis would indicate that the ASTER data is better as SRTM has a signifigant amount of land area filled using oversampled data, which are also the spot of the highest difference between the SRTM and ASTER data.
+Both datasets produce generally similar results, and it is difficult to say which one is superior. To have a good answer would require extensive testing of error in terms of how accurate the heights are and how close the modeled channels are to the actual channels. A quick analysis would indicate that the ASTER data is better as SRTM has a signifigant amount of land area filled using oversampled data, which are also the spot of the highest difference between the SRTM and ASTER data. The ASTER data also seems to get less confused by bodies on water when doing the hydrological analysis.
 
 Below is a map showing the differences in flow accumulation, another indicator of where error occurs. It is a large scale map because the map is unreadable at the full extent of the image, but this map shows how some pixels are seen as high flow accumulation in ASTER (red pixels, darker red indicates more flow accumulation), while others are higher in SRTM (blue).
 
