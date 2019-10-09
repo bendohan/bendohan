@@ -62,5 +62,8 @@ Another important piece of data I worked with these week was the .num files asso
 This is the SRTM .num map
 ![SRTM .num map](srtm_num_mosaic.png) ![SRTM num legend](srtm_num_mosaic_legend.png)
 
+This is the ASTER .num map
+![aster num map](aster_num_mosaic.png) ![aster num legend](aster_num_mosaic_legend.png)
+
 
 This work was all done with SAGA 6.2
