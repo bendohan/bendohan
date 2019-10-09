@@ -47,12 +47,20 @@ This map displays a vector version of the channel network overlaid on top of a h
 
 I learned to speed up the SAGA analysis by using a batch process, for which I used a .bat file with code designed to run on the windows shell. Using information availible in SAGA on how to use command lines, I was able to code then run a batch process that did the entire hydrological analysis in the windows shell without opening up SAGA at all. I was able to produce identical outputs, and it was also extremely easy to adapt the batch process to run using ASTER data instead of SRTM data, which made doing a comparison of the two datasets much easier. 
 
+Click here for the [ASTER Model](hydro_modelASTER.bat) and the [SRTM model](hydro_model.bat)
+
 Using the batch processes, I was able to make this set of DEM and Channel Network from SRTM data, which are identical to the ones I made in the previous lab
 
 ![srtm DEM](srtm_mosaic.png) ![srtm CN](srtm_channelmap.png)
 
 And here are the DEM and Channel Networks produced using the same process but ASTER data
+
 ![aster DEM](aster_mosaic.png) ![aster CN](aster_channelnetwork.png)
+
+Another important piece of data I worked with these week was the .num files associated with both SRTM and ASTER. These metadata files contain rasters that tell the user the source of each pixel in the dataset, as not all of it comes from the actual data gathering mission. The .num files are often an indicator of where error might be, and can inform the user as to why that error is there. To visualize this data, I made maps of the .num files to visualize which data sources make up the rasters that I have been using to do my hydrological modeling.
+
+This is the SRTM .num map
+![SRTM .num map](srtm_num_mosaic.png) ![SRTM num legend](srtm_num_mosaic_legend.png)
 
 
 This work was all done with SAGA 6.2
