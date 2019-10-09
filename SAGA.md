@@ -65,5 +65,23 @@ This is the SRTM .num map
 This is the ASTER .num map
 ![aster num map](aster_num_mosaic.png) ![aster num legend](aster_num_mosaic_legend.png)
 
+Another useful indicator of error is a comparison between the two DEM levels. The map below shows the ASTER DEM I created, with the values of the SRTM DEM subtracted from it. Red indicates SRTM was higher in that spot, and blue indicates ASTER was higher in that spot. The map is overlaid on top of a hillshade model.
+
+![difference map](aster_minus_Srtm_hs.png) ![difference legend](aster_minus_Srtm_hs_legend.png)
+
+After running my models, when I compare them to what is actually on the surfact of the earth there are some clear issues. Interestingly enough however, high differences between the SRTM and ASTER DEM's do not neccessarily mean there is a signifigant difference between the Channel Networks, as seen in this image. In general, the channel networks seem to struggle the most in flat areas.
+
+In the image below, you can see where both ASTER (red) and SRTM (blue) failed to match up to actual rivers
+
+![aster wrong](confused_aster2) ![srtm wrong](confused_channels1.png)
+
+Both datasets were also confused by bodies of water on the ground, as seen in the images below, as they only registered the water as flat ground.
+
+![aster confused](confused_aster1.png) ![srtm confused](confused_channels2.png)
+
+
+
+
+
 
 This work was all done with SAGA 6.2
