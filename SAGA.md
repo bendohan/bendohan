@@ -89,6 +89,9 @@ Meanwhile, in the image below, SRTM and ASTER put the channels in almost exactly
 
 Both datasets produce generally similar results, and it is difficult to say which one is superior. To have a good answer would require extensive testing of error in terms of how accurate the heights are and how close the modeled channels are to the actual channels. A quick analysis would indicate that the ASTER data is better as SRTM has a signifigant amount of land area filled using oversampled data, which are also the spot of the highest difference between the SRTM and ASTER data.
 
+Below is a map showing the differences in flow accumulation, another indicator of where error occurs
+![flow difference](
+
 Here are some cool 3D visualizations of the channel networks on the hillshade models
 
 SRTM 3D
