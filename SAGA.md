@@ -79,9 +79,17 @@ Both datasets were also confused by bodies of water on the ground, as seen in th
 
 ![aster confused](confused_aster1.png) ![srtm confused](confused_channels2.png)
 
+The image below shows how both datasets led to very similar channel networks in the high altitudes, but at low ground, where differences in elevation are more subtle and harder to detect, the channel networks diverged much more.
 
+![differences in channels](differences_ast_srtm.png)
 
+Meanwhile, in the image below, SRTM and ASTER put the channels in almost exactly the same place, even though the ravines shown in the image are the spot with the highest difference. This is likely because the ravines are deep enough that even the high difference isn't enough to make the DEM's think the ravinces are not there.
 
+![ravines](aster_Srtm_sim_hidif.png)
+
+Both datasets produce generally similar results, and it is difficult to say which one is superior. To have a good answer would require extensive testing of error in terms of how accurate the heights are and how close the modeled channels are to the actual channels.
+
+Here are some cool 3D visualizations of the channel networks on the hillshade models
 
 
 This work was all done with SAGA 6.2
