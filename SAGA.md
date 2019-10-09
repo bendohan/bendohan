@@ -48,6 +48,11 @@ This map displays a vector version of the channel network overlaid on top of a h
 I learned to speed up the SAGA analysis by using a batch process, for which I used a .bat file with code designed to run on the windows shell. Using information availible in SAGA on how to use command lines, I was able to code then run a batch process that did the entire hydrological analysis in the windows shell without opening up SAGA at all. I was able to produce identical outputs, and it was also extremely easy to adapt the batch process to run using ASTER data instead of SRTM data, which made doing a comparison of the two datasets much easier. 
 
 Using the batch processes, I was able to make this set of DEM and Channel Network from SRTM data, which are identical to the ones I made in the previous lab
+
 ![srtm DEM](srtm_mosaic.png) ![srtm CN](srtm_channelmap.png)
+
+And here are the DEM and Channel Networks produced using the same process but ASTER data
+![aster DEM](aster_mosaic.png) ![aster CN](aster_channelnetwork.png)
+
 
 This work was all done with SAGA 6.2
