@@ -1,0 +1,172 @@
+SELECT distinct highway FROM planet_osm_line LIMIT 100
+
+update planet_osm_line set width = replace(width, 'O', '0') 
+
+update planet_osm_line set width = trim(width, ' Mmetrs') 
+
+SELECT distinct width FROM planet_osm_line WHERE highway is not NULL ORDER BY width DESC
+
+ALTER TABLE planet_osm_line ADD COLUMN nwidth float
+
+UPDATE planet_osm_line SET nwidth = CAST(width AS float) WHERE highway IS NOT NULL
+
+/' Getting the building files'/
+
+create table health as
+SELECT building, amenity, way FROM planet_osm_polygon
+where building = 'hospital' or amenity = 'hospital' or amenity = 'doctors' or building = 'doctors'
+
+
+SELECT building, amenity FROM planet_osm_polygon WHERE building = 'yes' AND amenity IS NULL OR building = 'residential'
+
+SELECT* FROM houses WHERE
+ST_Distance 
+
+/'fixes geometry and consolidates tables'/
+select populate_geometry_columns()
+
+ST_INTERSECTS(nearestpoint, buffer)
+
+create table st_transform(geom, "4326")::geometry("4326", 'multipolygon') homes as
+SELECT building, amenity FROM planet_osm_polygon WHERE building = 'yes' AND amenity IS NULL OR building = 'residential'
+
+create table test as 
+SELECT building, amenity, way::geometry(4326, 'multipolygon')  FROM planet_osm_polygon WHERE building = 'yes' AND amenity IS NULL OR building = 'residential'
+
+CREATE TABLE buffer3 as
+SELECT nwidth, surface, smoothness, ST_Buffer(Geography(way), 5+nwidth/2, 'endcap=round')
+FROM planet_osm_line WHERE nwidth > 0 //made all buffers the same
+
+UPDATE planet_osm_line SET nwidth = 0 WHERE highway IS NOT NULL AND nwidth is null
+
+ALTER TABLE planet_osm_line ADD COLUMN distinction integer
+
+UPDATE planet_osm_line SET distinction = 1 WHERE highway = 'trunk' or highway = 'trunk_link' or highway = 'primary' or highway = 'primary_link'
+
+UPDATE planet_osm_line SET distinction = 0 WHERE  highway = 'yes'  OR highway =  'unclassified' OR  highway  =  'bridleway' OR  highway = 'construction' OR  highway = 'cycleway' OR highway = 'footway' OR  highway = 'path' OR highway = 'pedestrian' OR highway = 'residential' Or highway=  'road'  OR highway = 'secondary' OR highway = 'secondary_link' OR  highway = 'service' OR  highway = 'steps' OR highway = 'tertiary' Or highway = 'tertiary_link' OR highway = 'track' 
+
+CREATE TABLE buffer4 as
+SELECT nwidth, surface, smoothness,
+
+CREATE TABLE buffer7 as
+SELECT nwidth, distinction
+
+CASE
+WHEN distinction = 1 then ST_Buffer(Geography(way), 18+nwidth/2, 'endcap=round')
+when distinction = 0 then ST_Buffer(Geography(way), 5+nwidth/2, 'endcap=round')
+end  as link
+
+FROM planet_osm_line 
+WHERE highway is not null
+
+ALTER table home ADD COLUMN linkage float
+
+update buffer7 set geom = link::geometry('polygon', 4326)
+
+SELECT addgeometrycolumn('public', 'buffer7', 'geom', 4326,
+'polygon', 2)
+
+UPDATE home set linkage = distinction FROM buffer7 WHERE st_intersects(way, geom)
+
+CREATE TABLE subward2 as
+SELECT place, way 
+from planet_osm_polygon
+WHERE place = 'subward'
+
+ALTER table subward2 ADD COLUMN linked float
+
+ALTER table home ADD COLUMN subward integer
+
+UPDATE home
+SET subward = fid
+FROM subwardra
+WHERE ST_Intersects(way, ST_makeValid(geom)) 
+
+UPDATE subwardra
+SET pctaccess = test1.count/test2.count
+FROM test1, test2
+
+
+ALTER table home add column access integer
+
+UPDATE home
+set access = 1 WHERE linkage IS NOT NULL
+
+UPDATE home
+set access = 0 WHERE linkage IS NULL
+
+alter table home add column pctaccess float
+
+create table test6 as 
+ select subward, count(access) as acY from home
+ WHERE access = 1
+ group by subward
+
+alter table subwardra add column allhomes integer
+ 
+update subwardra 
+set allhomes = acT FROM test5 WHERE test5.subward = subwardra.fid
+
+alter table subwardra add column sherlockhomes integer
+
+update subwardra 
+set sherlockhomes = acY FROM test6 WHERE test6.subward = subwardra.fid
+
+update subwardra
+set pctaccess = (sherlockhomes/allhomes *100)
+
+alter table subwardra add column allhomes2 float
+
+update subwardra 
+set allhomes2 = acT FROM test5 WHERE test5.subward = subwardra.fid
+
+alter table subwardra add column sherlockhomes2 float
+
+update subwardra 
+set sherlockhomes2 = acY FROM test6 WHERE test6.subward = subwardra.fid
+
+/*does not work*/
+update home
+set pctaccess  = sum(access)/COUNT(access) 
+from home 
+group by subward
+
+update subwardra
+set pctaccess  = sum(access)/COUNT(access) 
+from home 
+group by home.subward
+
+
+
+Create table  subwcount as
+SELECT 
+subward as subw,
+count(linkage) as major WHERE linkage = 1
+count(linkage) as minor WHERE linkage = 0
+count(linkage) as nada WHERE linkage IS NULL
+count(subward) as total
+FROM home
+
+CREATE TABLE counter as
+ SELECT COUNT(subward)
+ FROM home
+ GROUP BY linkage, subward
+
+UPDATE counter2
+SET count =  SELECT COUNT(subward)
+ FROM counter2
+ GROUP BY linkage
+
+SELECT linkage FROM home
+INNER JOIN subwardra
+ON ST_Intersects(way, ST_makeValid(geom)) 
+
+create view test4 as 
+ select subward, count(access) from home
+group by subward
+
+
+SELECT count as acT FROM test4
+left JOIN subwardra
+ON test4.subward = subwardra.fid
+
