@@ -55,5 +55,73 @@ SELECT building, amenity, way::geometry(4326, 'polygon')  FROM planet_osm_polygo
 This creates a new table from the osm polygon data that extracts only the residential houses and buildings of unknown use. It also forces the geometry data to be polygons. This data may appear in several different forms in the database, which can be solved with another query:
 select populate_geometry_columns()
 
+Next up is comparing the buffer and home layers to test accessibility
+STEP 7:
+ALTER table home ADD COLUMN linkage float
 
+update buffer7 set geom = link::geometry('polygon', 4326)
+
+UPDATE home set linkage = distinction FROM buffer7 WHERE st_intersects(way, geom)
+
+The first two lines allow the third line to run. The first line adds a new column that will tell us whether the home intersects a large road, a small road, or no road. The second line changes the geography of the buffer into a geometry so we can use it for the third step, and intersection between the home layer and the buffer layer. The distinction value from the buffer will be attached to any houses it intersects with. Now its time to bring in the subward layer from Resilience Academy
+
+STEP 8:
+ALTER table home ADD COLUMN subward integer
+
+UPDATE home
+SET subward = fid
+FROM subwardra
+WHERE ST_Intersects(way, ST_makeValid(geom))
+
+We start off step 8 by adding a new column to the home layer that gives us a location to store the data about which subward the house is in. The second step runs an intersection nearly identical to the one from step 7, but in this case we are comparing the house to the subward. There is also the 'ST_makeValid' function in there, which fixes invalid geometries. Once this is done, each house should have the fid of the polygon from the resilience academy subwards attached to it. Next up is prepping the data to count accessible homes and inaccessible homes.
+
+STEP 9
+ALTER table home add column access integer
+
+UPDATE home
+set access = 1 WHERE linkage IS NOT NULL
+
+UPDATE home
+set access = 0 WHERE linkage IS NULL
+
+These three querys add a new column where we can store whether the house is accessible or not in, and then we make that equal 1 if the house has a linkage value (intersected a buffer) or 0 if the house has no linkage value because it didn't intersect any buffer. Now we can count the accessible homes.
+
+STEP 10:
+create table acc as 
+ select subward, count(access) as acY from home
+ WHERE access = 1
+ group by subward
+ 
+ create table total as 
+ select subward, count(access) as acY from home
+ group by subward
+
+The two querys in this step are almost the same, but the first one only counts the accessible homes, and the second one counts all the homes. The 'Group By' function means that we get the number of home/accessible homes in each subward in the output table. Now we have out counts, but these new tables have no geometry so we can't visualize anything.
+
+STEP 11:
+alter table subwardra add column allhomes2 float
+
+update subwardra 
+set allhomes2 = acT FROM test5 WHERE acc.subward = subwardra.fid
+
+alter table subwardra add column sherlockhomes2 float
+
+update subwardra 
+set sherlockhomes2 = acY FROM test6 WHERE total.subward = subwardra.fid
+
+In this step we take data from the tables we created in step 10 and we put that data back into our subwards attribute table with a column for accessible homes and a column for inaccessible homes. Although these numbers are integers, it is important to use the float data type because they are too long for the integer data type. We are able to combine from these two tables because they both have the fid unique identifier. Now its time to calculate the percent of accessible homes in each subward.
+STEP 12:
+alter table home add column pctaccess float
+
+update subwardra
+set pctaccess = (sherlockhomes/allhomes *100)
+
+Now we have a new column with a value from each subward that contains the percent of homes that are accessible by road or path in that subward. You can now visualize that data and see what it looks like. Congratulations! We can still make the map a little more interesting...
+
+STEP 13:
+create table health as
+SELECT building, amenity, way FROM planet_osm_polygon
+where building = 'hospital' or amenity = 'hospital' or amenity = 'doctors' or building = 'doctors'
+
+This query creates a new table that isolates the healthcare options in Dar es Salaam. This is important because it will be hard to get emergency responders to inaccessible homes, meaning people whose homes are not accessible by road or path will have to wait longer to receive aid. If you add this layer to your map, it provides more information about which parts of the city are vulnerable.
 
