@@ -44,6 +44,16 @@ end as link
 FROM planet_osm_line 
 WHERE highway is not null
 
-Now we have created the buffer. Notice that for large roads the base size of our buffer is 18 meters, but for the smaller one it is 5 meters. Step 4 allowed us to use a case statement to make this happen. We name this buffer link, and only do it where highway is not null so that we are sure we are only buffering roads and paths.
+Now we have created the buffer. Notice that for large roads the base size of our buffer is 18 meters, but for the smaller one it is 5 meters. Step 4 allowed us to use a case statement to make this happen. We name this buffer link, and only do it where highway is not null so that we are sure we are only buffering roads and paths. We turned the geometry into a geography value because that turns the units into meters, when before they were in degrees.
+
+With our buffers created, we need to prepare the houses layer that we want to use the buffer to count.
+
+STEP 6:
+create table home as 
+SELECT building, amenity, way::geometry(4326, 'polygon')  FROM planet_osm_polygon WHERE building = 'yes' AND amenity IS NULL OR building = 'residential'
+
+This creates a new table from the osm polygon data that extracts only the residential houses and buildings of unknown use. It also forces the geometry data to be polygons. This data may appear in several different forms in the database, which can be solved with another query:
+select populate_geometry_columns()
+
 
 
