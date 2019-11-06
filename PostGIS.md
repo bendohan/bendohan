@@ -1,5 +1,6 @@
-## SQL GIS and online mapping:
-## An interactive urban resilience excercise
+## SQL GIS and online mapping
+
+## An interactive urban resilience excercise: Accessibility in Dar es Salaam, Tanzania
 
 This excercise is based around using Opensource data and GIS to measure Urban Resiliency. We will use data from Dar es Salaam, Tanzania, which is one of the best mapped regions on OpenStreetMap. This is a massive dataset, and so we will need to pick and choose what data we want to use, then isolate that data.
 
@@ -11,7 +12,7 @@ update planet_osm_line set width = trim(width, ' Mmetrs')
 
 The first line here replaces any O's with zeros, and the second line removes anything after it detects an M. So, if a user entered a width value as '1o meters', it becomes '10'.
 
-Now we need to turn what had been a string data type into a integer so we can use it in later calculations. Although it is possible to recast columns, its oftene easier to simply create a new column and populate it with the same information but give it the correct data type, which is what we will do here
+Now we need to turn what had been a string data type into a integer so we can use it in later calculations. Although it is possible to recast columns, its often easier to simply create a new column and populate it with the same information but give it the correct data type, which is what we will do here
 STEP 2:
 ALTER TABLE planet_osm_line ADD COLUMN nwidth float
 
