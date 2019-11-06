@@ -32,7 +32,7 @@ UPDATE planet_osm_line SET distinction = 1 WHERE highway = 'trunk' or highway = 
 UPDATE planet_osm_line SET distinction = 0 WHERE  highway = 'yes'  OR highway =  'unclassified' OR  highway  =  'bridleway' OR  highway = 'construction' OR  highway = 'cycleway' OR highway = 'footway' OR  highway = 'path' OR highway = 'pedestrian' OR highway = 'residential' Or highway=  'road'  OR highway = 'secondary' OR highway = 'secondary_link' OR  highway = 'service' OR  highway = 'steps' OR highway = 'tertiary' Or highway = 'tertiary_link' OR highway = 'track' 
 
 Here we have created a new column to distinguishe between large roads and small roads/paths because houses are set further back from the large roads, so we need a larger buffer for them, but if we use a larger buffer on the small roads then we will be capturing more houses than we want in the analysis
-
+---------------------------------
 STEP 5:
 CREATE TABLE buffer7 as
 SELECT nwidth, distinction
