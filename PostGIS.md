@@ -131,7 +131,7 @@ where building = 'hospital' or amenity = 'hospital' or amenity = 'doctors' or bu
 
 This query creates a new table that isolates the healthcare options in Dar es Salaam. This is important because it will be hard to get emergency responders to inaccessible homes, meaning people whose homes are not accessible by road or path will have to wait longer to receive aid. If you add this layer to your map, it provides more information about which parts of the city are vulnerable.
 
-I made a [leaflet map](dsmap) showing the percent of houses in each subward accessible by road, with the healthcare options overlaid.
+I made a [leaflet map](dsmap/index.html) showing the percent of houses in each subward accessible by road, with the healthcare options overlaid.
 
 [Here is a txt file with the SQL code](noteslab6TXT)
 
