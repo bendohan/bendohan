@@ -11,4 +11,4 @@ Using the hierarchical chart showing the weights given to each factor, we attemp
 
 ![capacitygrid_large.png]
 
-!(capacity_raster.png)
+![large pixel size](capacity_raster.png)
