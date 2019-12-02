@@ -7,4 +7,8 @@ Due to legal restrictions on the data, we the students we unable to look at the 
 
 The SQL queries we used are [included here](vulnerabilitySQL.sql)
 
-Using the hierarchical chart showing the weights given to each factor, we attempted to recreate the maps that Malcomb et al produced. 
+Using the hierarchical chart showing the weights given to each factor, we attempted to recreate the map of adaptive capacity that Malcomb et al produced. 
+
+![capacitygrid_large.png]
+
+!(capacity_raster.png)
