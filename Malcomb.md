@@ -11,7 +11,7 @@ Using the hierarchical chart showing the weights given to each factor, we attemp
 
 Here is the map at the larger resolution
 
-![large vulnerability raster](vulnerability.PNG)
+![large vulnerability raster](vulnerbility.PNG)
 
 Here is the map at the smaller resolution, the one used by Malcomb et al
 
