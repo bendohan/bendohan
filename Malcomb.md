@@ -6,3 +6,5 @@ The focus of this lab was to investigate reproducibility and replicability in ge
 Due to legal restrictions on the data, we the students we unable to look at the data, but we looked at the metadata, and from that we were able to develop an SQL script that isolated the data we wanted. We then put it into quantiles (with our best guess as to how Malcomb did it), and attached the survey points to the traditional authorities that Malcomb used in his analysis.
 
 The SQL queries we used are [included here](vulnerabilitySQL.sql)
+
+Using the hierarchical chart showing the weights given to each factor, we attempted to recreate the maps that Malcomb et al produced. 
