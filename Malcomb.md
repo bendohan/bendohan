@@ -9,8 +9,10 @@ The SQL queries we used are [included here](vulnerabilitySQL.sql)
 
 Using the hierarchical chart showing the weights given to each factor, we attempted to recreate the map of vulnerability that Malcomb et al created. The flood risk and drought risk layers were in different pixel sizes, so we made the map in both, although we can tell that the authors used the smaller size
 
-Here is the map at the resolution used by Malcomb et al
+Here is the map at the larger resolution
 
-![small vulnerability raster](Vulnerability.PNG)
+![large vulnerability raster](vulnerability.PNG)
 
-![large vulnerability raster](vulnerability_large.PNG)
+Here is the map at the smaller resolution, the one used by Malcomb et al
+
+![small vulnerability raster](vulnerability_small.PNG)
