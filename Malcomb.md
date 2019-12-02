@@ -3,6 +3,8 @@
 
 The focus of this lab was to investigate reproducibility and replicability in geographic research. We looked specifically at one article that was attempting to quantify social vulnerbality in Malawi. We started off by looking for Malcomb's data, and found some of it, but not all of it. Malcomb used data from the Department of Health Surveys, UNEP GLobal Risk, and FEWSNet. Our professor was able to acquire the DHS data, but it you do need to apply to use it. The UNEP data is availible to anyone online, but Malcomb was not clear about which data sources he used, so we had to take an educated guess, and we were unable to find the FEWSNet data.
 
+The DHS surveys were conducted between 2004 and 2010, and although we don't know when the flood risk and drought exposure layers are updated we do, those are likely to change much slower than the DHS survey data so the research should be representative of the time period 2004-2010.
+
 Due to legal restrictions on the data, we the students we unable to look at the data, but we looked at the metadata, and from that we were able to develop an SQL script that isolated the data we wanted. We then put it into quantiles (with our best guess as to how Malcomb did it), and attached the survey points to the traditional authorities that Malcomb used in his analysis.
 
 The SQL queries we used are [included here](vulnerabilitySQL.sql)
