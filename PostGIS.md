@@ -123,6 +123,8 @@ This query creates a new table that isolates the healthcare options in Dar es Sa
 
 I made a [leaflet map](dsmap/index.html) showing the percent of houses in each subward accessible by road, with the healthcare options overlaid.
 
+The general pattern in the map is that districts closer to the city center tend to be more accessible, but in the outskirts of the city many homes are not adjacent to any road or path.
+
 [Here is an SQL file with the SQL code](lab6SQL)
 
 [Click here to go back to my homepage](index.md)
