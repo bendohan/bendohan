@@ -151,7 +151,7 @@ _STEP 13:_
 
 >where building = 'hospital' or amenity = 'hospital' or amenity = 'doctors' or building = 'doctors'
 
-This query creates a new table that isolates the healthcare options in Dar es Salaam. This is important because it will be hard to get emergency responders to inaccessible homes, meaning people whose homes are not accessible by road or path will have to wait longer to receive aid. If you add this layer to your map, it provides more information about which parts of the city are vulnerable.
+This query creates a new table that isolates the healthcare options in Dar es Salaam. This is important because it will be hard to get emergency responders to inaccessible homes, meaning people whose homes are not accessible by road or path will have to wait longer to receive aid. If you add this layer to your map, it provides more information about which parts of the city are vulnerable. It would be nice to add roads to the map, but the file is too large for leaflet to be able to properly load it.
 
 I made a [leaflet map](dsmap/index.html) showing the percent of houses in each subward accessible by road, with the healthcare options overlaid.
 
