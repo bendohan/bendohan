@@ -157,6 +157,6 @@ I made a [leaflet map](dsmap/index.html) showing the percent of houses in each s
 
 The general pattern in the map is that districts closer to the city center tend to be more accessible, but in the outskirts of the city many homes are not adjacent to any road or path.
 
-[Here is an SQL file with the SQL code](sqllab6.sql)
+[Here is an SQL file with the SQL code](sqllab6.SQL)
 
 [Click here to go back to my homepage](index.md)
