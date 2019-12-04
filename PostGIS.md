@@ -133,6 +133,6 @@ This query creates a new table that isolates the healthcare options in Dar es Sa
 
 I made a [leaflet map](dsmap/index.html) showing the percent of houses in each subward accessible by road, with the healthcare options overlaid.
 
-[Here is a txt file with the SQL code](noteslab6TXT)
+[Here is an SQL file with the SQL code](lab6SQL)
 
 [Click here to go back to my homepage](index.md)
