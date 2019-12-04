@@ -60,7 +60,9 @@ Next up is comparing the buffer and home layers to test accessibility
 
 _STEP 7:_
 >ALTER table home ADD COLUMN linkage float
+
 >update buffer7 set geom = link::geometry('polygon', 4326)
+
 >UPDATE home set linkage = distinction FROM buffer7 WHERE st_intersects(way, geom)
 
 The first two lines allow the third line to run. The first line adds a new column that will tell us whether the home intersects a large road, a small road, or no road. The second line changes the geography of the buffer into a geometry so we can use it for the third step, and intersection between the home layer and the buffer layer. The distinction value from the buffer will be attached to any houses it intersects with. Now its time to bring in the subward layer from Resilience Academy
