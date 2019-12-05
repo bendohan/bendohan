@@ -29,6 +29,8 @@ Another issue with the data is the uncertainity, as the authors attach the dhs s
 
 One of the most important things we can do as geographers is to include the data we used, or specific instructions on how to access that data, in our reports. It is also important to include what was done in GIS to turn the data into our result. That should mean detailed descriptions of what was done and maybe a workflow, and also attaching a model if one was used in the analysis.
 
+Malcom uses what Tate(2012) calls a hierarchichal approach.
+
 Another problem is that the way vulnerability was measured here is flawed. We have no idea how accurate the DHS survey's are, and its very posible people simply lied on them, especially given that there is a history of mistrust between locals and aid organizations. In fact, using the data sources Malcomb et al used might not be accurately measuring vulnerability. The author's only included local knowledge in deciding which DHS survey factors were the most important, so there might be other, very important factors that contribute to vulnerability that are not included here. Malcomb et al also gave each factor its own weighting, and what is essentially their best guess at how important each DHS survey category is could be completely wrong.
 
 
