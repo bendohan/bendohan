@@ -1,4 +1,6 @@
-## Welcome to Ben's Github Homepage
+# Benjamin Dohan's Github Homepage
+
+## I'm a Geography student at Middlebury College and created this page as part of an OpenSource GIS course
 
 Click [here](QGIS.md) for my work in QGIS
 
