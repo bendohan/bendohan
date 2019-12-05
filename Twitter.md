@@ -5,3 +5,10 @@
 This lab was based on gathering spatial twitter data through the Twitter API, using the R library rtweet. The data gathered was any tweet with the keyword "Dorian" Spatial twitter data comes in many forms; some data has specific coordinates, but the majority of twitter data that has some sort of spatial element is attributed to the bounding box of whatever spatial element that is, whether a city, a landmark, a state, or even an entire country. For this reason, we had to find the centroids of the bounding boxes, and then convert the datapoints to be geographically located in the center of those bounding boxes. That was for the spatial part of the analysis, which was done in PostGIS, QGIS, and GeoDa, but first we did some non-spatial analysis in R, using [this script](dorian.r) to look at the most common keywords in the tweets about Hurricane Dorian, as well as how these words were associated. 
 
 ![most common keywords](Rplot.png)
+
+This is a chart of the most common words in tweets about Hurricane Dorian, and while the prescence of "dorian" and "hurricane" is not particularly interesting, its very notable that 4 of the following 5 top keywords are about Trump's map alteration, rather than about the hurricane itself. Despite the fact that Dorian dealt historic damage to the Bahamas, with a death count in the hundreds if not thousands, the president's alteration of a NOAA map to include Alabama in Dorian's path was tweeted about more than the Bahamas were.
+
+![word association map](Rplot01.png)
+
+This is a word association map, showing all words that were included in over 30 tweets about dorian, and the closer they are to another word, the more they were used together in the same tweet. Its interesting that Fake News and most of the Trump-related words are not close together. In general, we see the trump related tweets concentrated in the left and center-left, while words about the actual hurricane spread out from around those tweets, showing that the sharpiegate related tweets were more likely to include the same keywords as other sharpiegate related tweets, while tweets about Dorian the hurricane were less likely to use the same keywords.
+
