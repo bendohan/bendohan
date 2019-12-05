@@ -18,3 +18,11 @@ Using this data, I created a heatmap showing which areas had the highest tweet r
 ![heatmap](heatmap.png)
 
 The heatmap shows that the most tweets were along the east coast, areas that may have been hit by Dorian.
+
+I also performed a Getis-Ord G* analysis of the tweet rate data in GeoDa (using [this weighting matrix](weighting_matrix.gwt). That created the map of concentrated heighs and lows by county seen below, as well as a map of the statistical signifigance of the difference.
+
+![Getis Ord G*](geodamap.png)
+
+![signifigance](geodamapsig.png)
+
+
