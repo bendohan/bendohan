@@ -24,7 +24,9 @@ library(rccmisc)
 
 help(rtweet) # put a library name or function in the help function to get help on anything!
 
-
+#get a Census API here: https://api.census.gov/data/key_signup.html
+#replace the key text 'yourkey' with your own key!
+Counties <- get_estimates("county",product="population",output="wide",geometry=TRUE,keep_geo_vars=TRUE, key="yourkey")
 ############# TEXT / CONTEXTUAL ANALYSIS ############# 
 
 dorian$text <- plain_tweets(dorian$text)
