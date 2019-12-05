@@ -5,7 +5,7 @@ The focus of this lab was to investigate reproducibility and replicability in ge
 
 The DHS surveys were conducted between 2004 and 2010, and although we don't know when the flood risk and drought exposure layers are updated we do, those are likely to change much slower than the DHS survey data so the research should be representative of the time period 2004-2010.
 
-We uploaded this data into PostGIS using (this R script)[rstransscript.r]
+We uploaded this data into PostGIS using [this R script](rstransscript.r)
 
 Due to legal restrictions on the data, we the students we unable to look at the data, but we looked at the metadata, and from that we were able to develop an SQL script that isolated the data we wanted. We then put it into quantiles (with our best guess as to how Malcomb did it), and attached the survey points to the traditional authorities that Malcomb used in his analysis.
 
