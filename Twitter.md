@@ -16,3 +16,5 @@ Going back to the spatial data, I took the tweets and put them into my PostGIS d
 
 Using this data, I created a heatmap showing which areas had the highest tweet rates about Dorian
 ![heatmap](heatmap.png)
+
+The heatmap shows that the most tweets were along the east coast, areas that may have been hit by Dorian.
