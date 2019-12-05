@@ -10,5 +10,6 @@ This is a chart of the most common words in tweets about Hurricane Dorian, and w
 
 ![word association map](Rplot01.png)
 
-This is a word association map, showing all words that were included in over 30 tweets about dorian, and the closer they are to another word, the more they were used together in the same tweet. Its interesting that Fake News and most of the Trump-related words are not close together. In general, we see the trump related tweets concentrated in the left and center-left, while words about the actual hurricane spread out from around those tweets, showing that the sharpiegate related tweets were more likely to include the same keywords as other sharpiegate related tweets, while tweets about Dorian the hurricane were less likely to use the same keywords.
+This is a word association map, showing all words that were included in over 30 tweets about dorian, and the closer they are to another word, the more they were used together in the same tweet. Its interesting that Fake News and most of the Trump-related words are not close together. In general, we see the trump related tweets concentrated in the left and center-left, while words about the actual hurricane spread out from around those tweets, showing that the sharpiegate related tweets were more likely to include the same keywords as other sharpiegate related tweets, while tweets about Dorian the hurricane were less likely to use th
 
+Going back to the spatial data, I took the tweets and put them into my PostGIS database, then analyzed them using [this sql code](noteslab10.sql)
