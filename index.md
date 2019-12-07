@@ -4,7 +4,7 @@
 
 I learned [QGIS tools such as model builders and execute SQL](QGIS.md)
 
-My class also was[mapping water channels using DEM's in SAGA](SAGA.md)
+My class also was [mapped water channels using DEM's in SAGA](SAGA.md)
 
 We've also worked on an experiment to investigate [reproducibility in geographic research](Malcomb.md) 
 
