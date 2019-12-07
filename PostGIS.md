@@ -2,7 +2,7 @@
 
 ## An interactive urban resilience excercise: Accessibility in Dar es Salaam, Tanzania
 
-This excercise is based around using Opensource data and GIS to measure Urban Resiliency. All the research I did in the process of creating this excercise was done with my classmate [Robbie Kelley](rmkelley.github.io). We will use data from Dar es Salaam, Tanzania, which is one of the best mapped regions on [OpenStreetMap](https://www.openstreetmap.org/#map=4/38.01/-95.84). This is a massive dataset, and so we will need to pick and choose what data we want to use, then isolate that data. I also used subward data from [Ramani Huria](https://ramanihuria.org/)
+This excercise is based around using Opensource data and GIS to measure Urban Resiliency. All the research I did in the process of creating this excercise was done with my classmate [Robbie Kelley](https://rmkelley.github.io/). We will use data from Dar es Salaam, Tanzania, which is one of the best mapped regions on [OpenStreetMap](https://www.openstreetmap.org/#map=4/38.01/-95.84). This is a massive dataset, and so we will need to pick and choose what data we want to use, then isolate that data. I also used subward data from [Ramani Huria](https://ramanihuria.org/)
 
 To upload data from OpenStreetMap in my PostGIS database, I used a program called osm2pgsql, which can be accessed [on github](https://github.com/openstreetmap/osm2pgsql).
 
