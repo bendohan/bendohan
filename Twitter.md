@@ -26,4 +26,5 @@ I also performed a Getis-Ord G* analysis of the tweet rate data in GeoDa (using 
 
 ![significance](geodasig.PNG)
 
+These results are interesting in that you can see Sharpiegate generated a lot of interest on twitter
 
