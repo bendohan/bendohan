@@ -26,5 +26,5 @@ I also performed a Getis-Ord G* analysis of the tweet rate data in GeoDa (using 
 
 ![significance](geodasig.PNG)
 
-These results are interesting in that you can see Sharpiegate generated a lot of interest on twitter. Tweets about Trump's map alterations clearly outpaced tweets about the disaster in the Bahamas, although we see that the tweet rate had hotspots along the southern Atlantic coast, indicating that a lot of people tweeting about the storm who those were more likely to be affected by it. This social vulnerability index
+These results are interesting in that you can see Sharpiegate generated a lot of interest on twitter. Tweets about Trump's map alterations clearly outpaced tweets about the disaster in the Bahamas, although we see that the tweet rate had hotspots along the southern Atlantic coast, indicating that a lot of people tweeting about the storm who those were more likely to be affected by it. This excercise is also interesting because it shows the power of what Elwood et al (2012) call ~volunteered geographic information~
 
