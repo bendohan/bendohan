@@ -14,12 +14,13 @@ This is a word association map, showing all words that were included in over 30 
 
 Going back to the spatial data, I took the tweets and put them into my PostGIS database, then analyzed them using [this sql code](noteslab10.sql). The general idea was to create two new columns, one called tweetrate, which normalized the number of tweets by the population in the county the tweet was from, and another called normalized differential tweet index, which normalized the number of tweets by the number of tweets over the same period of time in November. 
 
-Using this data, I created a heatmap showing which areas had the highest tweet rates about Dorian
+Using this data, I created a heatmap showing which areas had the highest tweet rates about Dorian. The heatmap was made in QGIS using the Heatmap (Kernel Density Estimation) tool with a radius of 100 kilometers, weight from field as the tweet rate column, and a pixel size of 500 meters.
+
 ![heatmap](heatmap.png)
 
 The heatmap shows that the most tweets were along the east coast, areas that may have been hit by Dorian.
 
-I also performed a Getis-Ord G* analysis of the tweet rate data in GeoDa (using [this weighting matrix](weighting_matrix.gwt). That created the map of concentrated heighs and lows by county seen below (at a 0.05 signifigance level), as well as a map of the statistical signifigance of the difference.
+I also performed a Getis-Ord G* analysis of the tweet rate data in GeoDa (using [this threshold distance weighting matrix](weighting_matrix.gwt). That created the map of concentrated heighs and lows by county seen below (at a 0.05 signifigance level), as well as a map of the statistical signifigance of the difference.
 
 ![Getis Ord G*](geodamap.PNG)
 
