@@ -256,7 +256,7 @@
     <Option name="ALG_DESC" type="QString" value="This model is used to find the distance and direction of polygons from a central point, such as finding the distance and direction of census tracts from the city center"/>
     <Option name="ALG_HELP_CREATOR" type="QString" value=""/>
     <Option name="ALG_VERSION" type="QString" value=""/>
-    <Option name="HELP_URL" type="QString" value="https://github.com/bendohan/bendohan.github.io"/>
+    <Option name="HELP_URL" type="QString" value="https://bendohan.github.io"/>
     <Option name="SHORT_DESCRIPTION" type="QString" value=""/>
     <Option name="citycenter" type="QString" value="This element is the point or polygons that make up the city center (or whatever the central point is)"/>
     <Option name="fieldnameprefix" type="QString" value="Allows the user to control the naming prefix in the outfield attributes"/>
