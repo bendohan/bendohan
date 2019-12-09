@@ -7,7 +7,7 @@ I made this model for finding direction and distance in my QGIS class
 
 [Here](model1_v3.2.model3) is an updated version of the model that that uses an SQL transform function for geodesic measurements which are more accurate
 
-I used the updated model to calculate the direction and distance of the census tracts in Suffolk County, MA from the Central Business District of Boston, and showed how distance comparess to median gross rent in [this scatter plot](boston_scatterplot.html), as well as how direction compared to median gross rent in [this polar plot](polar_boston.html)
+I used the updated model to calculate the direction and distance of the census tracts in Suffolk County, MA from the Central Business District of Boston, and showed how distance comparess to median gross rent in [this scatter plot](boston_scatter.html), as well as how direction compared to median gross rent in [this polar plot](boston_polar.html).
 
 The data is stored in [this geopackage](Suffolk_tracts.gpkg), which includes the point I used for the raw data for the latinx population and Median Gross Rent in Massachusets, as well as the CBD I generated and a shapefile of the census tracts in Suffolk county with the relevant data joined. The data is from [American FactFinder](https://factfinder.census.gov/) and the census tracts shapefiles came from the [website for the United States Census]( https://www.census.gov/geographies/mapping-files/timeseries/geo/carto-boundary-file.html)
 
