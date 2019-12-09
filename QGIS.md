@@ -3,7 +3,7 @@
 
 I made this model for finding direction and distance in my QGIS class
 
-[my first QGIS model](model1.model3)
+[my first QGIS model](model1_v3.2.model3)
 
 [Here](model1_v3.2.model3) is an updated version of the model that that uses an SQL transform function for geodesic measurements which are more accurate
 
