@@ -22,7 +22,7 @@ Here is a map of the directions it calculated for each census tract from the CBD
 Here is a map of the distances for each census tract from the CBD of Boston
 ![distance map](distance_boston.png)
 
-From these maps, we can see that most
+From these maps, we can see that the city center is located more towards the east and west of the cities, and that, due the non-circular shape of the city, the census tracts in the south are the farthest from the city center.
 
 This model was full of issues, and it took lots of work to make, and still doesn’t function 100% as desired (the city center input must be a point, it cannot be a shapefile). My professor was able to file a bug notice on a forum, and soon after received a response from one of the lead developers of QGIS, which really emphasized to me how adaptable and user-centric open source can be (even though, in this case, the developer stated that it was actually working as designed). This would have never happened in a course taught using ArcGIS, and emphasizes why not teaching heterodox GIS is important, which is one of the main points in Kevin St. Martin and John Wing’s article “The Discourse and Discipline of GIS” (2007). Seeing this in action also very much rejects the idea that GIS is progressing on a linear path, as it is rejected in St. Martin and Wing (2007). What makes sense to my professor is not what seems logical to the developer. There is no one way forward, there are many possibilities of what GIS can become. 
 
