@@ -1,8 +1,8 @@
 :: command to import rasters into tpostgis database on artemis, by Joseph Holler
 
-K:\gg323\raster2pgsql\raster2pgsql -s 4326 -d UNEP_GRID\dr_physexp.tif public.droughtrisk  > droughtrisk.sql
+K:\gg323\raster2pgsql\raster2pgsql -s 4326 -d -t auto UNEP_GRID\dr_physexp.tif public.droughtrisk  > droughtrisk.sql
 
-K:\gg323\raster2pgsql\raster2pgsql -s 4326 -d UNEP_GRID\fl_physexp.tif public.floodexposure  > floodexposure.sql
+K:\gg323\raster2pgsql\raster2pgsql -s 4326 -d -t auto UNEP_GRID\fl_physexp.tif public.floodexposure  > floodexposure.sql
 
 pause
 
