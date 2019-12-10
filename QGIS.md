@@ -1,9 +1,7 @@
 
 ## My first QGIS model
 
-I made this model for finding direction and distance in my QGIS class
-
-[my first QGIS model](model1_v3.2.model3)
+I made [this model for finding direction and distance](model1_v3.2.model3) in my first OpenSource class, where we worked with QGIS's model builder. 
 
 [Here is an updated version of the model](model1final.model3) that that uses an SQL transform function for geodesic measurements which are more accurate
 
