@@ -14,7 +14,7 @@ The adaptive capacity scores in the traditional authorities produced the map bel
 
 The SQL queries we used are [included here](vulnerabilitySQL.sql)
 
-Using the hierarchical chart showing the weights given to each factor, we attempted to recreate the map of vulnerability that Malcomb et al created. The flood risk and drought risk layers were in different pixel sizes, so we made the map in both, although we can tell that the authors used the smaller size, which was 0.416667
+Using the hierarchical chart showing the weights given to each factor, we attempted to recreate the map of vulnerability that Malcomb et al created. The flood risk and drought risk layers were in different pixel sizes, so we made the map in both, although we can tell that the authors used the smaller size, which was 0.416667. We used [a model in QGIS](vuln_rd2_works.model3) that approximates the steps we guessed that Malcomb et al took in creating their map.
 
 We pulled the UNEP rasters in PostGIS using [this batch script](convertRaster.bat).
 
