@@ -111,5 +111,5 @@ dbWriteTable(con,'counties',counties, overwrite=TRUE)
 dbDisconnect(con)
 
 #export twitter id's for rehydration and reproducibility - from Kazuto Nishimori https://kazuto-nishimori.github.io/
-dorianTweetId <- select(dorian,c("user_id","status_id"))
+dorianTweetId <- select(dorian,("status_id"))
 write.csv(dorianTweetId,file="dorianTweetID.csv")
