@@ -1,4 +1,4 @@
-#search and analyze twitter data, by Joseph Holler, 2019
+#search and analyze twitter data, by Joseph Holler, 2019, with alterations by Ben Dohan, 2019
 #following tutorial at https://www.earthdatascience.org/courses/earth-analytics/get-data-using-apis/use-twitter-api-r/
 #also get advice from the rtweet page: https://rtweet.info/
 #to do anything, you first need a twitter API token: https://rtweet.info/articles/auth.html 
@@ -7,7 +7,7 @@
 install.packages(c("rtweet","tidycensus","tidytext","maps","RPostgres","igraph","tm", "ggplot2","RColorBrewer","rccmisc","ggraph"))
 
 
-#initialize the libraries. this must be done each time you load the project
+#initialize the libraries
 library(rtweet)
 library(igraph)
 library(dplyr)
@@ -28,9 +28,10 @@ help(rtweet) # put a library name or function in the help function to get help o
 #replace the key text 'yourkey' with your own key!
 Counties <- get_estimates("county",product="population",output="wide",geometry=TRUE,keep_geo_vars=TRUE, key="yourkey")
 ############# TEXT / CONTEXTUAL ANALYSIS ############# 
-
+#turn dorian tweets text into plain text
 dorian$text <- plain_tweets(dorian$text)
 
+#seperate each individual word in the tweet texts, removing punctuation and converting to lowercase and adding tweet ids to words
 dorianText <- select(dorian,text)
 dorianWords <- unnest_tokens(dorianText, word, text)
 
@@ -41,12 +42,14 @@ count(dorianWords)
 data("stop_words")
 stop_words <- stop_words %>% add_row(word="t.co",lexicon = "SMART")
 
+#remove stop words from the tweets
 dorianWords <- dorianWords %>%
   anti_join(stop_words) 
 
 # how many words after removing the stop words?
 count(dorianWords)
 
+#graph the number of times words were used in tweets about dorian
 dorianWords %>%
   count(word, sort = TRUE) %>%
   top_n(15) %>%
@@ -59,14 +62,16 @@ dorianWords %>%
        y = "Unique words",
        title = "Count of unique words found in tweets")
 
+#remove stopwords and punctuation, convert to lowercase, add tweet ids to words
 dorianPairs <- dorian %>% select(text) %>%
   mutate(text = removeWords(text, stop_words$word)) %>%
   unnest_tokens(paired_words, text, token = "ngrams", n = 2)
 
+#find which words were associated in the tweets
 dorianWordPairs <- separate(dorianPairs, paired_words, c("word1", "word2"),sep=" ")
 dorianWordCount <- dorianWordPairs %>% count(word1, word2, sort=TRUE)
 
-#graph a word cloud with space indicating association. you may change the filter to filter more or less than pairs with 10 instances
+#graph a word cloud with space indicating association between words (30 use minimum)
 dorianWordCount %>%
   filter(n >= 30) %>%
   graph_from_data_frame() %>%
@@ -94,13 +99,8 @@ dbListTables(con)
 dorian <- select(dorian,c("user_id","status_id","text","lat","lng"),starts_with("place"))
 
 #write data to the database
-#replace new_table_name with your new table name
-#replace dhshh with the data frame you want to upload to the database 
 dbWriteTable(con,'dorian', dorian, overwrite=TRUE)
 dbWriteTable(con,'november', november, overwrite=TRUE)
-#SQL to add geometry column of type point and crs NAD 1983: 
-#SELECT AddGeometryColumn ('public','winter','geom',4269,'POINT',2, false);
-#SQL to calculate geometry: update deval set geom = st_transform(st_setsrid (st_makepoint(lng,lat),4326),4269);;
 
 #make all lower-case names for this table
 counties <- lownames(Counties)
@@ -109,3 +109,7 @@ dbWriteTable(con,'counties',counties, overwrite=TRUE)
 
 #disconnect from the database
 dbDisconnect(con)
+
+#export twitter id's for rehydration and reproducibility - from Kazuto Nishimori https://kazuto-nishimori.github.io/
+dorianTweetId <- select(dorian,c("user_id","status_id"))
+write.csv(dorianTweetId,file="dorianTweetID.csv")
