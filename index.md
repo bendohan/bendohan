@@ -1,6 +1,6 @@
-# Benjamin Dohan's Github Homepage
+# Benjamin Dohan's Homepage
+## A Portfolio of OpenSource GIS Work
 
-## I'm a Geography student at Middlebury College and created this page as part of an OpenSource GIS course
 
 I learned [QGIS tools such as model builders and execute SQL](QGIS.md)
 
