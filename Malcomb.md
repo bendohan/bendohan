@@ -12,6 +12,9 @@ Due to legal restrictions on the data, we the students we unable to look at the 
 The adaptive capacity scores in the traditional authorities produced the map below
 ![capacity scores](capacity.png)
 
+It can be compared to the map that Malcomb produced
+![Malcomb capacity scores](Malcomb_cap.png)
+
 The SQL queries we used are [included here](vulnerabilitySQL.sql)
 
 Using the hierarchical chart showing the weights given to each factor, we attempted to recreate the map of vulnerability that Malcomb et al created. The flood risk and drought risk layers were in different pixel sizes, so we made the map in both, although we can tell that the authors used the smaller size, which was 0.416667
@@ -25,6 +28,9 @@ Here is the map at the larger resolution
 Here is the map at the smaller resolution, the one used by Malcomb et al
 
 ![small vulnerability raster](vulnerability_small.PNG)
+
+For comparison, the map that Malcomb et al produced
+![Malcomb vulnerability scores](Malcomb_vul.png)
 
 Neither map looks exactly like the map in the original paper, but they are relatively similar in terms of the results output, and it is impossible to know whether differences are due to us not following the same steps Malcomb et al followed, or due to us not being able to access all the same data that Malcomb accessed.
 
