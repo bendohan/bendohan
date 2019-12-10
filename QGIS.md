@@ -34,3 +34,4 @@ Martin, K. St., & Wing, J. (2007). The Discourse and Discipline of GIS. Cartogra
 
 Sieber, R. (2004). Rewiring for a GIS/2. Cartographica: The International Journal for Geographic Information and Geovisualization, 39(1), 25–39. https://doi.org/10.3138/T6U8-171M-452W-516R
 
+[Return to Homepage](index.md)
