@@ -55,3 +55,4 @@ Tate, E. (2012). Social vulnerability indices: A comparative assessment using un
 
 Hinkel, J. (2011). “Indicators of vulnerability and adaptive capacity”: Towards a clarification of the science–policy interface. Global Environmental Change, 21(1), 198–208. https://doi.org/10.1016/j.gloenvcha.2010.08.002
 
+[Return to Homepage](index.md)
