@@ -159,4 +159,4 @@ The general pattern in the map is that districts closer to the city center tend 
 
 [Here is an SQL file with the SQL code](sqllab6.sql)
 
-[Return to homepage](index.md)
+[Return to Homepage](index.md)
