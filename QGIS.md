@@ -18,7 +18,7 @@ Here is a map of the directions it calculated for each census tract from the CBD
 ![direction map](cardinalBos.PNG)
 
 Here is a map of the distances for each census tract from the CBD of Boston
-![distance map](disBos.PNG)
+![distance map](distBos.PNG)
 
 From the map of which direction the census tracts are from the CBD, we can see that the CBD is located more towards the west and north of the city, as there is less land that is west of it than is east of it, and less land to the north than there is to the south. Due the oblong shape of the city, the census tracts in the south are the farthest from the city center. Census tracts in the north are also relatively far, while everything to the east and everything to the west other than the peninsula-like section are relatively close to the CBD. From the charts I produced I can see that the cheapest housing is concentrated southwest of the CBD. Mid-range housing is also in that direction, as well as in the northeast, and the most expensive housing tends to be somewhere south of the CBD. From the scatter plot I can conclude that both the cheapest and most expensive housing is closest to the CBD, and the range narrows as you get further from the CBD. All the housing furthest from the CBD is in the middle of how much rent costs.
 
