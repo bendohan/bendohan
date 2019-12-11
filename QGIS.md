@@ -30,8 +30,8 @@ Some criticism of GIS focuses on GIS as an extension of oppressive institutional
 
 -----------------------------------------------------------------------------------------------------------------------------
 
-Martin, K. St., & Wing, J. (2007). The Discourse and Discipline of GIS. Cartographica: The International Journal for Geographic Information and Geovisualization, 42(3), 235–248. https://doi.org/10.3138/carto.42.3.235
+Martin, K. St., & Wing, J. (2007). The Discourse and Discipline of GIS. Cartographica: The International Journal for Geographic Information and Geovisualization, 42(3), 235–248. [https://doi.org/10.3138/carto.42.3.235](https://doi.org/10.3138/carto.42.3.235)
 
-Sieber, R. (2004). Rewiring for a GIS/2. Cartographica: The International Journal for Geographic Information and Geovisualization, 39(1), 25–39. https://doi.org/10.3138/T6U8-171M-452W-516R
+Sieber, R. (2004). Rewiring for a GIS/2. Cartographica: The International Journal for Geographic Information and Geovisualization, 39(1), 25–39. [https://doi.org/10.3138/T6U8-171M-452W-516R](https://doi.org/10.3138/T6U8-171M-452W-516R)
 
 [Return to Homepage](index.md)
