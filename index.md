@@ -1,15 +1,15 @@
 # Benjamin Dohan's Homepage
-## A Portfolio of OpenSource GIS Work
+## A Portfolio of OpenSource GIS Work for OpenSource GISscience at Middlebury College
 
 
-I learned [QGIS tools such as model builders and execute SQL](QGIS.md)
+I learned [QGIS tools such as model builders and execute SQL](QGIS.md) .
 
-My class also was [mapped water channels using DEM's in SAGA](SAGA.md)
+My class also [mapped water channels using DEM's in SAGA](SAGA.md).
 
-We've also worked on an experiment to investigate [reproducibility in geographic research](Malcomb.md) 
+I used [PostGIS for Urban Resilience mapping in Dar es Salaam, Tanzania](PostGIS.md), and check out [my leaflet map of road access in Dar es Salaam](dsmap/index.html).
 
-I've also analyzed twitter data to [investigate whether Hurricane Dorian or Sharpiegate was more tweeted about](Twitter.md)
+We've also worked on an experiment to investigate [reproducibility in geographic research](Malcomb.md) .
 
-Click [here](PostGIS.md) to learn about using how I used PostGIS for Urban Resilience mapping, and check out [my leaflet map of road access in Dar es Salaam](dsmap/index.html)
+And I've also analyzed twitter data to [investigate whether Hurricane Dorian or Sharpiegate was more tweeted about](Twitter.md).
 
-Click [here](Academia.md) for my thoughts on academic articles
+I have also [reviewed academic articles](Academia.md)
