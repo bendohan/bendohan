@@ -12,4 +12,6 @@ We've worked on an experiment to investigate [reproducibility in geographic rese
 
 And I've also analyzed twitter data to [investigate whether Hurricane Dorian or Sharpiegate was more tweeted about](Twitter.md).
 
+For my final project, I taught myself [some of the basic functionality of spdep in RStudio](final.md)
+
 I have also [reviewed academic articles](Academia.md)
