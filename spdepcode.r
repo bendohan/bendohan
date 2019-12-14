@@ -1,0 +1,117 @@
+#Using spdep to do spatial analysis of census data, written by Ben Dohan
+
+
+#install packages for census and data management
+install.packages(c("tidycensus","tidytext","tidyverse", "maps","tm","RColorBrewer","rccmisc","sf", "spdep"))
+
+#load libraries
+library(tidytext)
+library(tm)
+library(tidyr)
+library(tidycensus)
+library(tidyverse)
+library(RColorBrewer)
+library(rccmisc)
+library(spdep)
+library(sf)
+library(dplyr)
+
+#get a Census API here: https://api.census.gov/data/key_signup.html
+#replace the key text 'yourkey' with your own key!
+census_api_key=("e5cea676e32c5e71d4910bd19e0af6083909ec03")
+
+
+#load and display American community survey variables - from https://walkerke.github.io/tidycensus/articles/basic-usage.html
+variablesACS <- load_variables(2017, "acs5", cache = FALSE)
+View(variablesACS)
+
+#load and display census variables
+variablesCensus <- load_variables(2010, "sf1", cache = FALSE)
+View(variablesCensus)
+
+#select the states to acquire data from, using two letter abbreviations
+states <- c("NH", "ME", "VT", "MA", "CT", "RI", "NY", "PA", "NJ")
+
+#select the variables to pull from the 2010 decennial census
+#the number of urban and rural homes is not collected by the acs, therefore I used the census for it
+decVar <- c(
+  urban = "H002002",
+  rural = "H002005")
+
+#select the variables to pull from the 2017 american community survey
+acsVar <- c(
+  population = "B00001_001",
+  bachelors = "B06009_005",
+  medInc = "B06011_001",
+  seasonal = "B25004_006"
+)
+
+#grab data from the acs, by county
+dataACS <- get_acs("county", variables = acsVar, state = states, output="wide",geometry=TRUE,keep_geo_vars=TRUE, key="e5cea676e32c5e71d4910bd19e0af6083909ec03")
+
+#grab data from the census, by county
+dataCensus <- get_decennial(geography = "county", variables= decVar, state = states, output="wide",geometry=TRUE,keep_geo_vars=TRUE, key="e5cea676e32c5e71d4910bd19e0af6083909ec03") 
+
+#turn the census data into a data frame
+censusFrame<- as.data.frame(dataCensus)
+
+#join the acs and census data into one data frame, using the GEOID tag as a unique ID true to both tables
+censusTable<- left_join(townPop, urbanframe, by = ("GEOID" = "GEOID"))
+
+#calculate the number of seasonal homes per person by county 
+censusTable <- within(censusTable, seasonPop <- seasonalE / populationE)
+
+#calculate the percent of homes classified as rural by county
+censusTable <- within(censusTable, ruralPCT <- rural / (urban+rural))
+
+#calculate the percent of the population with a bachelors degree
+censusTable <- within(censusTable, education <- bachE/ populationE)
+
+#check that everything is working by looking at the data
+View(censusTable)
+
+#run a linear regression on seasonal population
+censusTable.lm <-lm(seasonPop~ruralPCT+medIncE+education, data=censusTable)
+
+#create a neighbors list from the county polygons
+censusTable.nb <- poly2nb(censusTable, row.names = "NAME.x.x", queen=TRUE)
+
+#creating spatial weights from neighbors list, zero policy needs be true because 2 of the 217 counties have no neighbors
+censusTable.lw <- nb2listw(censusTable.nb, glist=NULL, style="W", zero.policy =TRUE)
+
+#run a global Moran's I for regression residuals on the regression, with the hypothesis that...
+lm.morantest(censusTable.lm, censusTable.lw, zero.policy = TRUE, alternative = "greater")
+
+#run a local getis ord analysis on the seasonPop attribute
+seasonG <- localG(censusTable$seasonPop, listw=censusTable.lw, zero.policy=TRUE)
+
+#add the getis ord results to the dataframe
+censusTable$seasonStar <- seasonG
+
+#map the getis ord
+
+#set the color breaks, with breakpoints representing number of z-scores away from the mean
+breaks <-c(-100,-1, 1)
+#set the colors
+colors <-c("purple", "white", "green")
+#plot the map
+plot(censusTable["seasonStar"], col=colors[findInterval(censusTable$seasonStar, breaks, all.inside = FALSE)], axes = FALSE, asp=T)
+#add a title
+title("G* of ratio of seasonal housing to population")
+
+#run another local Getis Ord analysis, this time on percent of population with a bachelors degree
+edG <- localG(censusTable$education, listw=censusTable.lw, zero.policy=TRUE)
+
+#add the second getis ord to the dataframe
+censusTable$edStar <- edG
+
+#map the second getis ord
+breaks <-c(-100,-2, 2)
+colors <-c("purple", "white", "green")
+plot(censusTable["edStar"], col=colors[findInterval(censusTable$edStar, breaks, all.inside = FALSE)], axes = FALSE, asp=T)
+title("G* of percent of population with a BA")
+
+
+
+
+
