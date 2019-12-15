@@ -13,6 +13,8 @@ Step 1: Load tidycensus, RColorBrewer, dplyr, and spdep libraries
 
 Step 2: Create objects to hold states and variables that I want to pull from the census, as seen below
 
+![objects](objects.PNG)
+
 Step 3: Download two data columns from the 2010 census; number of urban households and number of rural households by county (which comes with geometry and identifying information). Only download data from Massachusetts, Connecticut, Rhode Island, Maine, New Hampshire, Vermont, New York, New Jersey, and Pennsylvania.
 
 Step 3: using the same methods as in step 3, download four data columns from the 2017 American Community Survey, by county; population, number of people with a bachelor's degree, median annual income, and number of seasonally occupied homes.
