@@ -44,7 +44,8 @@ Step 9: Create spatial weights based on that neighbors list
 
 ![spatial weight](weight.PNG)
 
-Step 10: Run a Global Moran's I Test for Residual Spatial Autocorrellation using the regression and the spatial weights. Results below
+Step 10: Run a Global Moran's I Test for Residual Spatial Autocorrellation using the regression and the spatial weights.
+
 ![Morans function](moran.PNG)
 ![Moran's I](moransi.PNG)
 
@@ -66,7 +67,7 @@ The linear regression indicated all three factor are significant to predicting w
 
 The hotspots of percent of the population with a bachelor's degree line up pretty well with the coldspots of the season housing, and vice versa, so it makes sense visually that there would be a strong correllation. Its also interesting to not that the hotspots of the percent with a bachelor's degree are more significant than the hotspots of the season housing, as I mapped percent with a bachelor's degree at a significance of 2 and 3 z-scores, whereas seasonal housing I could only go up to 2 z-scores. 
 
-The Moran's I test found that there is spatial autocorrellation among the regression residuals, with a p value of 0.01, and that it is a positive correlation. This makes sense because the two variables that were most strongly correllated to the dependent variable in the linear regression.
+The Moran's I test found that there is spatial autocorrellation among the regression residuals, with a p value of 0.01, and that it is a positive correlation. This makes sense because the two variables that were most strongly correllated to the dependent variable in the linear regression were positively correllated, so their residuals would also be positive, while median income was negatively correllated, but the correllation was weaker.
 
 The research I conducted is entirely OpenSource, as it only uses software that can be freely downloaded off the internet, and census data which can also be downloaded for free, even without the API, which can be acquired through a free and easy process. The data is both replicable, with the R script I have provided, and reproducible. If you want to do a similar analysis of different census data, or in a different region of the United States, it only requires minor changes to the attributes that are pulled from the census, and the variable names in functions. Even if you do the analysis using a different dataset, you would need to upload the data in a different manner but the functions and visualization should work the same.
 
