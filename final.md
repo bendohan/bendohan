@@ -37,7 +37,11 @@ Step 11: Map that G* analysis. I mapped the G* analysis of at both a 1 z-score s
 ![Seasonal G*, 1 Z-score](seasonal1zs.png)
 ![Seasonal G*, 2 Z-scores](seasonal2zs.png)
 
-My results are generally in line with what I expected. For the G* maps, there are hotspots of season housing in the Catskills, the Adirondacks, and lakes/white mountains region of New Hampshire and western Maine. The coldspots are centered around large cities like Boston, New York, Philadelphia, and Pittsburgh. The linear regression indicated all three factor are signigicant to predicting where seasonal housing is
+My results are generally in line with what I expected. For the G* maps, there are hotspots of season housing in the Catskills, the Adirondacks, and lakes/white mountains region of New Hampshire and western Maine. The coldspots are centered around large cities like Boston, New York, Philadelphia, and Pittsburgh. The linear regression indicated all three factor are signigicant to predicting where seasonal housing is, although rural percentage and percent of population with a bachelor's degree predicted it better than median income. I had expected median income to actually be a better predictor than bachelor's degrees, so I decided to do another G* analysis to see where the hot and cold spots of percent of the population with a bachelor's degree were.
+
+![Education G*, 2 Z-score](ed2zs.png)
+![Education G*, 2 Z-scores](ed3zs.png)
+
 
 The research I conducted is entirely OpenSource, as it only uses software that can be freely downloaded off the internet, and census data which can also be downloaded for free, even without the API, which can be acquired through a free and easy process. The data is both replicable, with the R script I have provided, and reproducible. If you want to do a similar analysis of different census data, or in a different region of the United States, it only requires minor changes to the attributes that are pulled from the census, and the variable names in functions. Even if you do the analysis using a different dataset, you would need to upload the data in a different manner but the functions and visualization should work the same.
 
