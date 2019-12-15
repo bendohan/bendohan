@@ -19,6 +19,7 @@ Step 4: Join the two tables together.
 Step 5: Create three new columns in the table; Ratio of seasonal homes to population (seasonal homes/population), percent of rural households (rural households/(ruralhouseholds+urban households)), and percent of people with a Bachelor's Degree (bachelors degrees/population).
 
 Step 6: Run a linear regression, with seasonal population as the dependent variable and median household income, percent rural, and percent with a bachelor's degree as independent variables. The results of my regression are below.
+
 ![linear regression](regresssion.PNG)
 
 Step 7: Create a neighbors list from the county polygons
@@ -26,6 +27,7 @@ Step 7: Create a neighbors list from the county polygons
 Step 8: Create spatial weights based on that neighbors list
 
 Step 9: Run a Global Moran's I Test for Residual Spatial Autocorrellation using the regression and the spatial weights. Results below
+
 ![Moran's I](moranresiduals.PNG)
 
 Step 10: Run a local G* analysis on the ratio of season housing to people
