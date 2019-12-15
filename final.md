@@ -17,7 +17,11 @@ Step 2: The code below shows how I created objects to hold states and variables 
 
 Step 3: Download two data columns from the 2010 census; number of urban households and number of rural households by county (which comes with geometry and identifying information). Only download data from Massachusetts, Connecticut, Rhode Island, Maine, New Hampshire, Vermont, New York, New Jersey, and Pennsylvania.
 
+![acs data](acs.PNG)
+
 Step 4: using the same methods as in step 3, download four data columns from the 2017 American Community Survey, by county; population, number of people with a bachelor's degree, median annual income, and number of seasonally occupied homes.
+
+![decennial data](decennial.PNG)
 
 Step 5: Join the two tables together.
 
