@@ -5,7 +5,7 @@ My goal in this project was to teach myself how to do some spatial statistical a
 
 All the data used for the lab came from the [United States Census Bureau](https://www.census.gov/data.html), and I downloaded it in RStudio using a census API and the tidycensus package. Because I chose to pull in data from the Census Bureau, my first step to learning how to use spdep was learning how to use tidycensus. It was also my first time writing my own code in R, but fortunately it functions a lot like javascript (which I have experience using in google earth engine) so it wasn't too difficult to pick up. It also took a bit of time to figure out how to use tidycensus. I had access to the creators help document, but even then I had to work around making the code actually work. I wanted to do the analysis at the county subdivision (town/city) level, but I couldnt successfully make the code work when I searched for "county subdivision" instead of "county" as my geography. I ended doing the analysis at the county level, although later I discovered that I could call the data one state at a time at the county subdivision level, and it would be possible to do that then aggregate it all into one table.
 
-I've provided the [R script I used in this investigation](spdepcodeComplete.r) 
+I've provided [the R script I used in this investigation](spdepcodeComplete.r), as well as [a csv file of my data](spdepData.csv).
 
 A brief walkthrough of my project is as follows:
 
@@ -52,8 +52,6 @@ The Moran's I test found that there is spatial autocorrellation among the regres
 The research I conducted is entirely OpenSource, as it only uses software that can be freely downloaded off the internet, and census data which can also be downloaded for free, even without the API, which can be acquired through a free and easy process. The data is both replicable, with the R script I have provided, and reproducible. If you want to do a similar analysis of different census data, or in a different region of the United States, it only requires minor changes to the attributes that are pulled from the census, and the variable names in functions. Even if you do the analysis using a different dataset, you would need to upload the data in a different manner but the functions and visualization should work the same.
 
 One issue with the results of my dataset is that I did not take into account error, and while the census data (urban/rural) households has minimal error because it is hypothetically a full count of the United States, the American Community Survey data is based on sample survey's, and so there is a margin of error. That margin of error is provided along with the estimates in the dataset I downloaded using the census API, but working that into my calculations was beyond the scope of my research, as I am still quite new to using R. Running a Monte Carlo simulation would be one good way to try to account for error.
-
-Attached here is [a csv file of my data](spdepData.csv)
 
 ------------------------------------------------------------------------------------------------------------------------------
 Tutorials used:
