@@ -22,7 +22,7 @@ Step 6: Run a linear regression, with seasonal population as the dependent varia
 
 ![linear regression](regresssion.PNG)
 
-Step 7: Create a neighbors list from the county polygons
+Step 7: Create a neighbors list from the county polygons. I chose to use queen contiguity because of how permeable county borders are.
 
 Step 8: Create spatial weights based on that neighbors list
 
@@ -37,11 +37,16 @@ Step 11: Map that G* analysis. I mapped the G* analysis of at both a 1 z-score s
 ![Seasonal G*, 1 Z-score](seasonal1zs.png)
 ![Seasonal G*, 2 Z-scores](seasonal2zs.png)
 
-My results are generally in line with what I expected. For the G* maps, there are hotspots of season housing in the Catskills, the Adirondacks, and lakes/white mountains region of New Hampshire and western Maine. The coldspots are centered around large cities like Boston, New York, Philadelphia, and Pittsburgh. The linear regression indicated all three factor are signigicant to predicting where seasonal housing is, although rural percentage and percent of population with a bachelor's degree predicted it better than median income. I had expected median income to actually be a better predictor than bachelor's degrees, so I decided to do another G* analysis to see where the hot and cold spots of percent of the population with a bachelor's degree were.
+My results are generally in line with what I expected. For the G* maps, there are hotspots of season housing in the Catskills, the Adirondacks, and lakes/white mountains region of New Hampshire and western Maine. The coldspots are centered around large cities like Boston, New York, Philadelphia, and Pittsburgh. 
+
+The linear regression indicated all three factor are signigicant to predicting where seasonal housing is, although rural percentage and percent of population with a bachelor's degree predicted it better than median income. I had expected median income to actually be a better predictor than bachelor's degrees, so I decided to do another G* analysis to see where the hot and cold spots of percent of the population with a bachelor's degree were.
 
 ![Education G*, 2 Z-score](education2zs.png)
 ![Education G*, 2 Z-scores](ed3zs.png)
 
+The hotspots of percent of the population with a bachelor's degree line up pretty well with the coldspots of the season housing, and vice versa, so it makes sense visually that there would be a strong correllation. Its also interesting to not that the hotspots of the percent with a bachelor's degree are more significant than the hotspots of the season housing, as I mapped percent with a bachelor's degree at a significance of 2 and 3 z-scores, whereas seasonal housing I could only go up to 2 z-scores. 
+
+The Moran's I test found that there is spatial autocorrellation among the regression residuals, with a p value of 0.01, and that it is a positive correlation. 
 
 The research I conducted is entirely OpenSource, as it only uses software that can be freely downloaded off the internet, and census data which can also be downloaded for free, even without the API, which can be acquired through a free and easy process. The data is both replicable, with the R script I have provided, and reproducible. If you want to do a similar analysis of different census data, or in a different region of the United States, it only requires minor changes to the attributes that are pulled from the census, and the variable names in functions. Even if you do the analysis using a different dataset, you would need to upload the data in a different manner but the functions and visualization should work the same.
 
