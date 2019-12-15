@@ -39,7 +39,7 @@ Step 11: Map that G* analysis. I mapped the G* analysis of at both a 1 z-score s
 
 My results are generally in line with what I expected. For the G* maps, there are hotspots of season housing in the Catskills, the Adirondacks, and lakes/white mountains region of New Hampshire and western Maine. The coldspots are centered around large cities like Boston, New York, Philadelphia, and Pittsburgh. The linear regression indicated all three factor are signigicant to predicting where seasonal housing is, although rural percentage and percent of population with a bachelor's degree predicted it better than median income. I had expected median income to actually be a better predictor than bachelor's degrees, so I decided to do another G* analysis to see where the hot and cold spots of percent of the population with a bachelor's degree were.
 
-![Education G*, 2 Z-score](ed2zs.png)
+![Education G*, 2 Z-score](education2zs.png)
 ![Education G*, 2 Z-scores](ed3zs.png)
 
 
