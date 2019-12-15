@@ -1,7 +1,7 @@
 # OpenSource GIScience Final Project
 ### Various Function of the spdep spatial statistics package in RStudio
 
-My goal in this project was to teach myself how to do some spatial statistical analysis in RStudio, as well as to familiarize myself with R and how it works for any future work I do in it. Although we used R in the twitter data labs, this was the first time I was writing my own R code from scratch. Specifically, my objective was to create and map the G* value of the ratio of seasonal homes to people by county, run a linear regression on the ratio of seasonal homes, and find the global Moran's I of the regression residuals, all using spdep (I did this work using version 1.1.3). I chose these three tests because they are three different ways of analyzing data for trends. The G* looks at spatial clustering of just one value, a linear regression only looks at how different variables are related to the outcome and does not include spatial data, the global Moran's I for regression residuals uses spatial data, along with multiple variables because it is based on regression residuals
+My goal in this project was to teach myself how to do some spatial statistical analysis in RStudio, as well as to familiarize myself with R and how it works for any future work I do in it. Although we used R in the twitter data labs, this was the first time I was writing my own R code from scratch. Specifically, my objective was to create and map the G* value of the ratio of seasonal homes to people by county, run a linear regression on the ratio of seasonal homes, and find the global Moran's I of the regression residuals, all using spdep (I did this work using version 1.1.3). I chose these three tests because they are three different ways of analyzing data for trends. The G* looks at spatial clustering of just one value, a linear regression only looks at how different variables are related to the outcome and does not include spatial data, the global Moran's I for regression residuals uses spatial data, along with multiple variables because it is based on regression residuals. The goal of the actual research is to investigate what influences where seasonal homes are located in the northeastern United States. I limited the scope to the northeastern United States because I hypothesized that skiing would be a big influencer of where vacation homes are in the north, but not in the south. 
 
 All the data used for the lab came from the United States Census Bureau, and I downloaded it in RStudio using a census API and the tidycensus package. Because I chose to pull in data from the Census Bureau, my first step to learning how to use spdep was learning how to use tidycensus. It was also my first time writing my own code in R, but fortunately it functions a lot like javascript (which I have experience using in google earth engine) so it wasn't too difficult to pick up. It also took a bit of time to figure out how to use tidycensus. I had access to the creators help document, but even then I had to work around making the code actually work. I wanted to do the analysis at the county subdivision (town/city) level, but I couldnt successfully make the code work when I searched for "county subdivision" instead of "county" as my geography. I ended doing the analysis at the county level, although later I discovered that I could call the data one state at a time at the county subdivision level, and it would be possible to do that then aggregate it all into one table.
 
@@ -19,16 +19,18 @@ Step 4: Join the two tables together.
 Step 5: Create three new columns in the table; Ratio of seasonal homes to population (seasonal homes/population), percent of rural households (rural households/(ruralhouseholds+urban households)), and percent of people with a Bachelor's Degree (bachelors degrees/population).
 
 Step 6: Run a linear regression, with seasonal population as the dependent variable and median household income, percent rural, and percent with a bachelor's degree as independent variables. The results of my regression are below.
+![linear regression](regresssion.PNG)
 
 Step 7: Create a neighbors list from the county polygons
 
 Step 8: Create spatial weights based on that neighbors list
 
-Step 9: Run a Global Moran's I Test for Residual Spatial Autocorrellation using the regression and the spatial weights 
+Step 9: Run a Global Moran's I Test for Residual Spatial Autocorrellation using the regression and the spatial weights. Results below
+![Moran's I](moranresiduals.PNG)
 
 Step 10: Run a local G* analysis on the ratio of season housing to people
 
-Step 11: Map that G* analysis
+Step 11: Map that G* analysis. I mapped the G* analysis of at both a 1 z-score signifigance level and a 2 z-score significance level.
 
 The research I conducted is entirely OpenSource, as it only uses software that can be freely downloaded off the internet, and census data which can also be downloaded for free, even without the API, which can be acquired through a free and easy process. The data is both replicable, with the R script I have provided, and reproducible. If you want to do a similar analysis of different census data, or in a different region of the United States, it only requires minor changes to the attributes that are pulled from the census, and the variable names in functions. Even if you do the analysis using a different dataset, you would need to upload the data in a different manner but the functions and visualization should work the same.
 
