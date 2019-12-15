@@ -54,9 +54,11 @@ The research I conducted is entirely OpenSource, as it only uses software that c
 One issue with the results of my dataset is that I did not take into account error, and while the census data (urban/rural) households has minimal error because it is hypothetically a full count of the United States, the American Community Survey data is based on sample survey's, and so there is a margin of error. That margin of error is provided along with the estimates in the dataset I downloaded using the census API, but working that into my calculations was beyond the scope of my research, as I am still quite new to using R. Running a Monte Carlo simulation would be one good way to try to account for error.
 
 ------------------------------------------------------------------------------------------------------------------------------
-Tutorials used:
+Tutorials and guides used:
 
 https://rstudio-pubs-static.s3.amazonaws.com/126356_ef7961b3ac164cd080982bc743b9777e.html
 http://labs.bio.unc.edu/buckley/documents/anselinintrospatregres.pdf
+https://www.rdocumentation.org/packages/spdep/versions/1.1-3
+https://walkerke.github.io/tidycensus/articles/basic-usage.html
 
 [Return to Homepage](index.md)
