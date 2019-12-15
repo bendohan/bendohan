@@ -22,7 +22,6 @@ Step 4: using the same methods as in step 3, download four data columns from the
 Step 5: Join the two tables together.
 
 The code below shows my R script for steps 3-5
-![35](35.PNG)
 
 Step 6: Create three new columns in the table; Ratio of seasonal homes to population (seasonal homes/population), percent of rural households (rural households/(ruralhouseholds+urban households)), and percent of people with a Bachelor's Degree (bachelors degrees/population).
 
