@@ -11,7 +11,7 @@ A brief walkthrough of my project is as follows:
 
 Step 1: Load tidycensus, RColorBrewer, dplyr, and spdep libraries
 
-Step 2: The code below shows how I created objects to hold states and variables that I want to pull from the census
+Step 2: The code below shows how I created objects to hold states and variables that I want to pull from the census. I chose these variables simply because I thought they might correllate with where seasonal homes are.
 
 ![objects](objects.PNG)
 
