@@ -23,9 +23,9 @@ Step 4: using the same methods as in step 3, download four data columns from the
 
 ![decennial data](decennial.PNG)
 
-Step 5: Join the two tables together.
+Step 5: Join the two tables together. The step of turning dataCensus into a data frame is important because it needs to be a data frame in order to be joined to the dataACS table, otherwise the function will not work.
 
-The code below shows my R script for steps 3-5
+![join steps](join.PNG)
 
 Step 6: Create three new columns in the table; Ratio of seasonal homes to population (seasonal homes/population), percent of rural households (rural households/(ruralhouseholds+urban households)), and percent of people with a Bachelor's Degree (bachelors degrees/population).
 
