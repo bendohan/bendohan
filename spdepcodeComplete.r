@@ -36,19 +36,19 @@ acsVar <- c(
 )
 
 #get a Census API here: https://api.census.gov/data/key_signup.html
-#replace the key text 'yourkey' with your own key
+#replace the key text 'insert key here' with your own key
 #grab data from the acs, by county
-dataACS <- get_acs("county", variables = acsVar, state = states, output="wide",geometry=TRUE,keep_geo_vars=TRUE, key="e5cea676e32c5e71d4910bd19e0af6083909ec03")
+dataACS <- get_acs("county", variables = acsVar, state = states, output="wide",geometry=TRUE,keep_geo_vars=TRUE, key="insert key here")
 
 #replace the key text 'yourkey' with your own key
 #grab data from the census, by county
-dataCensus <- get_decennial(geography = "county", variables= decVar, state = states, output="wide",geometry=TRUE,keep_geo_vars=TRUE, key="e5cea676e32c5e71d4910bd19e0af6083909ec03") 
+dataCensus <- get_decennial(geography = "county", variables= decVar, state = states, output="wide",geometry=TRUE,keep_geo_vars=TRUE, key="insert key here") 
 
 #turn the census data into a data frame
 censusFrame<- as.data.frame(dataCensus)
 
 #join the acs and census data into one data frame, using the GEOID tag as a unique ID true to both tables
-censusTable<- left_join(townPop, urbanframe, by = ("GEOID" = "GEOID"))
+censusTable<- left_join(dataACS, censusFrame, by = ("GEOID" = "GEOID"))
 
 #calculate the number of seasonal homes per person by county 
 censusTable <- within(censusTable, seasonPop <- seasonalE / populationE)
@@ -57,7 +57,7 @@ censusTable <- within(censusTable, seasonPop <- seasonalE / populationE)
 censusTable <- within(censusTable, ruralPCT <- rural / (urban+rural))
 
 #calculate the percent of the population with a bachelors degree
-censusTable <- within(censusTable, education <- bachE/ populationE)
+censusTable <- within(censusTable, education <- bachelorsE/ populationE)
 
 #check that everything is working by looking at the data
 View(censusTable)
@@ -105,7 +105,7 @@ colors <-c("purple", "white", "green")
 #plot the map
 plot(censusTable["seasonStar"], col=colors[findInterval(censusTable$seasonStar, breaks, all.inside = FALSE)], axes = FALSE, asp=T)
 #add a title
-title("G* of ratio of seasonal housing to population, 2 z-score significane")
+title("G* of ratio of seasonal housing to population, 2 z-score significance")
 
 #run another local Getis Ord analysis, this time on percent of population with a bachelors degree
 edG <- localG(censusTable$education, listw=censusTable.lw, zero.policy=TRUE)
