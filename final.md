@@ -41,8 +41,8 @@ My results are generally in line with what I expected. For the G* maps, there ar
 
 The linear regression indicated all three factor are signigicant to predicting where seasonal housing is, although rural percentage and percent of population with a bachelor's degree predicted it better than median income. I had expected median income to actually be a better predictor than bachelor's degrees, so I decided to do another G* analysis to see where the hot and cold spots of percent of the population with a bachelor's degree were.
 
-![Education G*, 2 Z-score](education2zs.png)
-![Education G*, 2 Z-scores](ed3zs.png)
+![Education G*, 2 Z-score](ed2last.png)
+![Education G*, 2 Z-scores](ed2z.png)
 
 The hotspots of percent of the population with a bachelor's degree line up pretty well with the coldspots of the season housing, and vice versa, so it makes sense visually that there would be a strong correllation. Its also interesting to not that the hotspots of the percent with a bachelor's degree are more significant than the hotspots of the season housing, as I mapped percent with a bachelor's degree at a significance of 2 and 3 z-scores, whereas seasonal housing I could only go up to 2 z-scores. 
 
