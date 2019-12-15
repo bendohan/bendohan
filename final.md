@@ -32,7 +32,7 @@ Step 9: Run a Global Moran's I Test for Residual Spatial Autocorrellation using 
 
 Step 10: Run a local G* analysis on the ratio of season housing to people
 
-Step 11: Map that G* analysis. I mapped the G* analysis of at both a 1 z-score signifigance level and a 2 z-score significance level.
+Step 11: Map that G* analysis. I mapped the G* analysis of at both a 1 z-score significance level and a 2 z-score significance level.
 
 ![Seasonal G*, 1 Z-score](seasonal1zs.png)
 ![Seasonal G*, 2 Z-scores](seasonal2zs.png)
