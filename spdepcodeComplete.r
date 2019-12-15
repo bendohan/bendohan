@@ -5,8 +5,6 @@
 install.packages(c("tidycensus","RColorBrewer","dplyr", "spdep"))
 
 #load libraries
-
-
 library(tidycensus)
 library(RColorBrewer)
 library(spdep)
@@ -67,6 +65,9 @@ View(censusTable)
 #run a linear regression on seasonal population
 censusTable.lm <-lm(seasonPop~ruralPCT+medIncE+education, data=censusTable)
 
+#view that regression
+summary(censusTable.lm)
+
 #create a neighbors list from the county polygons
 censusTable.nb <- poly2nb(censusTable, row.names = "NAME.x.x", queen=TRUE)
 
@@ -85,8 +86,7 @@ seasonG <- localG(censusTable$seasonPop, listw=censusTable.lw, zero.policy=TRUE)
 #add the getis ord results to the dataframe
 censusTable$seasonStar <- seasonG
 
-#map the getis ord
-
+#map the G* at a 1 z-score significance level
 #set the color breaks, with breakpoints representing number of z-scores away from the mean
 breaks <-c(-100,-1, 1)
 #set the colors
@@ -94,21 +94,39 @@ colors <-c("purple", "white", "green")
 #plot the map
 plot(censusTable["seasonStar"], col=colors[findInterval(censusTable$seasonStar, breaks, all.inside = FALSE)], axes = FALSE, asp=T)
 #add a title
-title("G* of ratio of seasonal housing to population")
+title("G* of ratio of seasonal housing to population, 1 z-score significance")
+
+
+#map the G* at a 2 z-score significance level
+#set the color breaks, with breakpoints representing number of z-scores away from the mean
+breaks <-c(-100,-2, 2)
+#set the colors
+colors <-c("purple", "white", "green")
+#plot the map
+plot(censusTable["seasonStar"], col=colors[findInterval(censusTable$seasonStar, breaks, all.inside = FALSE)], axes = FALSE, asp=T)
+#add a title
+title("G* of ratio of seasonal housing to population, 2 z-score significane")
 
 #run another local Getis Ord analysis, this time on percent of population with a bachelors degree
 edG <- localG(censusTable$education, listw=censusTable.lw, zero.policy=TRUE)
 
-#add the second getis ord to the dataframe
+#add the bachelor's degree G* to the dataframe
 censusTable$edStar <- edG
 
-#map the second getis ord
+#map the second G* at a 2 z-score level
 breaks <-c(-100,-2, 2)
 colors <-c("purple", "white", "green")
 plot(censusTable["edStar"], col=colors[findInterval(censusTable$edStar, breaks, all.inside = FALSE)], axes = FALSE, asp=T)
-title("G* of percent of population with a BA")
+title("G* of percent of population with a Bachelor's degree, 2 z-score significance ")
 
+#map the second G* at a 3 z-score level
+breaks <-c(-100,-3, 3)
+colors <-c("purple", "white", "green")
+plot(censusTable["edStar"], col=colors[findInterval(censusTable$edStar, breaks, all.inside = FALSE)], axes = FALSE, asp=T)
+title("G* of percent of population with a Bachelor's degree, 3 z-score significance ")
 
+#export data for reproducibility
+write.csv(censusTable,file="spdepData.csv")
 
 
 
