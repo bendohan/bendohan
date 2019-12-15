@@ -7,8 +7,7 @@ All the data used for the lab came from the United States Census Bureau, and I d
 
 The research I conducted is entirely OpenSource, as it only uses software that can be freely downloaded off the internet, and census data which can also be downloaded for free, even without the API, which can be acquired through a free and easy process. The data is both replicable, with the R script I have provided, and reproducible. If you want to do a similar analysis of different census data, or in a different region of the United States, it only requires minor changes to the attributes that are pulled from the census, and the variable names in functions. Even if you do the analysis using a different dataset, you would need to upload the data in a different manner but the functions and visualization should work the same.
 
-
-
+One issue with the results of my dataset is that I did not take into account error, and while the census data (urban/rural) households has minimal error because it is hypothetically a full count of the United States, the American Community Survey data is based on sample survey's, and so there is a margin of error. That margin of error is provided along with the estimates in the dataset I downloaded using the census API, but working that into my calculations was beyond the scope of my research, as I am still quite new to using R. Running a Monte Carlo simulation would be one good way to try to account for error.
 
 
 ------------------------------------------------------------------------------------------------------------------------------
