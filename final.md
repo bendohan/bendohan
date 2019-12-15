@@ -60,5 +60,6 @@ https://rstudio-pubs-static.s3.amazonaws.com/126356_ef7961b3ac164cd080982bc743b9
 http://labs.bio.unc.edu/buckley/documents/anselinintrospatregres.pdf
 https://www.rdocumentation.org/packages/spdep/versions/1.1-3
 https://walkerke.github.io/tidycensus/articles/basic-usage.html
+https://www.dummies.com/programming/r/how-to-convert-tables-to-a-data-frame-in-r/
 
 [Return to Homepage](index.md)
