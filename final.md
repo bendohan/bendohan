@@ -21,26 +21,35 @@ Step 4: using the same methods as in step 3, download four data columns from the
 
 Step 5: Join the two tables together.
 
-Step 5: Create three new columns in the table; Ratio of seasonal homes to population (seasonal homes/population), percent of rural households (rural households/(ruralhouseholds+urban households)), and percent of people with a Bachelor's Degree (bachelors degrees/population).
-
 The code below shows my R script for steps 3-5
-![intemediat](intemediat.PNG)
+![35](35.PNG)
 
-Step 6: Run a linear regression, with seasonal population as the dependent variable and median household income, percent rural, and percent with a bachelor's degree as independent variables. The results of my regression are below.
+Step 6: Create three new columns in the table; Ratio of seasonal homes to population (seasonal homes/population), percent of rural households (rural households/(ruralhouseholds+urban households)), and percent of people with a Bachelor's Degree (bachelors degrees/population).
 
+![new columns](newcolumns.PNG)
+
+Step 7: Run a linear regression, with seasonal population as the dependent variable and median household income, percent rural, and percent with a bachelor's degree as independent variables. The results of my regression are below.
+
+![regression function](linearreg.PNG)
 ![linear regression](regresssion.PNG)
 
-Step 7: Create a neighbors list from the county polygons. I chose to use queen contiguity because of how permeable county borders are.
+Step 8: Create a neighbors list from the county polygons. I chose to use queen contiguity because of how permeable county borders are.
 
-Step 8: Create spatial weights based on that neighbors list
+![neighbors](neigh.PNG)
 
-Step 9: Run a Global Moran's I Test for Residual Spatial Autocorrellation using the regression and the spatial weights. Results below
+Step 9: Create spatial weights based on that neighbors list
 
+![spatial weight](
+
+Step 10: Run a Global Moran's I Test for Residual Spatial Autocorrellation using the regression and the spatial weights. Results below
+![Morans function](moran.PNG)
 ![Moran's I](moransi.PNG)
 
-Step 10: Run a local G* analysis on the ratio of season housing to people
+Step 11: Run a local G* analysis on the ratio of season housing to people
 
-Step 11: Map that G* analysis. I mapped the G* analysis of at both a 1 z-score significance level and a 2 z-score significance level.
+![gstar](gstar.PNG)
+
+Step 12: Map that G* analysis. I mapped the G* analysis of at both a 1 z-score significance level and a 2 z-score significance level.
 
 ![Seasonal G*, 1 Z-score](seasonal1zs.png)
 ![Seasonal G*, 2 Z-scores](seasonal2zs.png)
