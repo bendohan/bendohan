@@ -5,7 +5,8 @@ My goal in this project was to teach myself how to do some spatial statistical a
 
 All the data used for the lab came from the [United States Census Bureau](https://www.census.gov/data.html), and I downloaded it in RStudio using a census API and the tidycensus package. Because I chose to pull in data from the Census Bureau, my first step to learning how to use spdep was learning how to use tidycensus. It was also my first time writing my own code in R, but fortunately it functions a lot like javascript (which I have experience using in google earth engine) so it wasn't too difficult to pick up. It also took a bit of time to figure out how to use tidycensus. I had access to the creators help document, but even then I had to work around making the code actually work. I wanted to do the analysis at the county subdivision (town/city) level, but I couldnt successfully make the code work when I searched for "county subdivision" instead of "county" as my geography. I ended doing the analysis at the county level, although later I discovered that I could call the data one state at a time at the county subdivision level, and it would be possible to do that then aggregate it all into one table.
 
-The R script I made for this lab is accessible [by clicking here](spdepcodeComplete.r) 
+I've provided the [R script I used in this investigation](spdepcodeComplete.r) 
+
 A brief walkthrough of my project is as follows:
 
 Step 1: Load tidycensus, RColorBrewer, dplyr, and spdep libraries
