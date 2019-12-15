@@ -39,7 +39,7 @@ Step 8: Create a neighbors list from the county polygons. I chose to use queen c
 
 Step 9: Create spatial weights based on that neighbors list
 
-![spatial weight](
+![spatial weight](weight.PNG)
 
 Step 10: Run a Global Moran's I Test for Residual Spatial Autocorrellation using the regression and the spatial weights. Results below
 ![Morans function](moran.PNG)
@@ -52,7 +52,7 @@ Step 11: Run a local G* analysis on the ratio of season housing to people
 Step 12: Map that G* analysis. I mapped the G* analysis of at both a 1 z-score significance level and a 2 z-score significance level.
 
 ![Seasonal G*, 1 Z-score](seasonal1zs.png)
-![Seasonal G*, 2 Z-scores](seasonal2zs.png)
+![Seasonal G*, 2 Z-scores](zlast.png)
 
 My results are generally in line with what I expected. For the G* maps, there are hotspots of season housing in the Catskills, the Adirondacks, and lakes/white mountains region of New Hampshire and western Maine. The coldspots are centered around large cities like Boston, New York, Philadelphia, and Pittsburgh. 
 
