@@ -11,15 +11,20 @@ A brief walkthrough of my project is as follows:
 
 Step 1: Load tidycensus, RColorBrewer, dplyr, and spdep libraries
 
-Step 2: Create objects to hold states and variables that I want to pull from the census, as seen below
-
 ![objects](objects.PNG)
+
+Step 2: The code above shows how I created objects to hold states and variables that I want to pull from the census
+
+![intermediat](intermediat.PNG)
+This code is the for the next three steps
 
 Step 3: Download two data columns from the 2010 census; number of urban households and number of rural households by county (which comes with geometry and identifying information). Only download data from Massachusetts, Connecticut, Rhode Island, Maine, New Hampshire, Vermont, New York, New Jersey, and Pennsylvania.
 
-Step 3: using the same methods as in step 3, download four data columns from the 2017 American Community Survey, by county; population, number of people with a bachelor's degree, median annual income, and number of seasonally occupied homes.
+Step 4: using the same methods as in step 3, download four data columns from the 2017 American Community Survey, by county; population, number of people with a bachelor's degree, median annual income, and number of seasonally occupied homes.
 
-Step 4: Join the two tables together.
+Step 5: Join the two tables together.
+
+Steps 3-5 are bel
 
 Step 5: Create three new columns in the table; Ratio of seasonal homes to population (seasonal homes/population), percent of rural households (rural households/(ruralhouseholds+urban households)), and percent of people with a Bachelor's Degree (bachelors degrees/population).
 
