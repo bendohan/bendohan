@@ -28,7 +28,7 @@ Step 8: Create spatial weights based on that neighbors list
 
 Step 9: Run a Global Moran's I Test for Residual Spatial Autocorrellation using the regression and the spatial weights. Results below
 
-![Moran's I](moranresiduals.PNG)
+![Moran's I](moransi.PNG)
 
 Step 10: Run a local G* analysis on the ratio of season housing to people
 
