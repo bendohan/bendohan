@@ -15,3 +15,5 @@ And I've also analyzed twitter data to [investigate whether Hurricane Dorian or 
 I taught myself [some of the basic functionality of spdep in RStudio](final.md)
 
 I have also [reviewed academic articles](Academia.md)
+
+Cartography experience
