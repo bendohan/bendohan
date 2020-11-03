@@ -4,14 +4,14 @@
 
 I learned [QGIS tools such as model builders and execute SQL](QGIS.md) .
 
-My class [mapped water channels using DEM's in SAGA](SAGA.md).
+Using SAGA software, I [mapped water channels using DEM's](SAGA.md).
 
 I used [PostGIS for Urban Resilience mapping in Dar es Salaam, Tanzania](PostGIS.md), and check out [my leaflet map of road access in Dar es Salaam](dsmap/index.html).
 
-We've worked on an experiment to investigate [reproducibility in geographic research](Malcomb.md) .
+With a class, I worked on an experiment to investigate [reproducibility in geographic research](Malcomb.md) .
 
 And I've also analyzed twitter data to [investigate whether Hurricane Dorian or Sharpiegate was more tweeted about](Twitter.md).
 
-For my final project, I taught myself [some of the basic functionality of spdep in RStudio](final.md)
+I taught myself [some of the basic functionality of spdep in RStudio](final.md)
 
 I have also [reviewed academic articles](Academia.md)
