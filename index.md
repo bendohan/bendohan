@@ -1,5 +1,5 @@
 # Benjamin Dohan's Homepage
-## A Portfolio of OpenSource GIS Work for OpenSource GISscience at Middlebury College
+## A Portfolio of GIS and Cartography work from my time as a student at Middlebury College
 
 
 I learned [QGIS tools such as model builders and execute SQL](QGIS.md) .
