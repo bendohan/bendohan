@@ -16,4 +16,4 @@ I taught myself [some of the basic functionality of spdep in RStudio](final.md)
 
 I have also [reviewed academic articles](Academia.md)
 
-Cartography experience
+Cartography Examples
